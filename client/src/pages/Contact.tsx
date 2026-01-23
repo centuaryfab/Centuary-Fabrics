@@ -1,0 +1,188 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent } from "@/components/ui/card";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { useToast } from "@/hooks/use-toast";
+
+const formSchema = z.object({
+  name: z.string().min(2, "Name is required"),
+  email: z.string().email("Invalid email address"),
+  subject: z.string().min(5, "Subject is required"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
+
+export default function Contact() {
+  const { toast } = useToast();
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
+
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    console.log(values);
+    toast({
+      title: "Message Sent",
+      description: "Thank you for contacting us. We will get back to you shortly.",
+    });
+    form.reset();
+  }
+
+  return (
+    <div className="min-h-screen pt-10 pb-20">
+      <div className="container max-w-6xl">
+        <div className="text-center mb-12 space-y-4">
+          <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground">Get in Touch</h1>
+          <p className="text-xl text-muted-foreground">
+            Have questions about our fabrics? We'd love to hear from you.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Info */}
+          <div className="space-y-8">
+            <div className="grid gap-6">
+              <Card className="border-none shadow-md bg-muted/30">
+                <CardContent className="p-6 flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <MapPin className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-1">Visit Us</h3>
+                    <p className="text-muted-foreground">
+                      123 Textile Avenue, Industrial Area<br />
+                      Mumbai, Maharashtra 400001<br />
+                      India
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-none shadow-md bg-muted/30">
+                <CardContent className="p-6 flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <Phone className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-1">Call Us</h3>
+                    <p className="text-muted-foreground">
+                      +91 98765 43210<br />
+                      +91 22 1234 5678
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-none shadow-md bg-muted/30">
+                <CardContent className="p-6 flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <Mail className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-1">Email Us</h3>
+                    <p className="text-muted-foreground">
+                      info@centuaryfab.com<br />
+                      sales@centuaryfab.com
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="border-none shadow-md bg-muted/30">
+                <CardContent className="p-6 flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <Clock className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-1">Business Hours</h3>
+                    <p className="text-muted-foreground">
+                      Monday - Saturday: 9:00 AM - 6:00 PM<br />
+                      Sunday: Closed
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <Card className="shadow-lg border-t-4 border-t-primary">
+            <CardContent className="p-8">
+              <h2 className="font-heading text-2xl font-bold mb-6">Send us a Message</h2>
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Full Name</FormLabel>
+                        <FormControl>
+                          <Input placeholder="John Doe" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Email Address</FormLabel>
+                        <FormControl>
+                          <Input placeholder="john@example.com" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="subject"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Subject</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Product Inquiry" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Message</FormLabel>
+                        <FormControl>
+                          <Textarea 
+                            placeholder="Tell us about your requirements..." 
+                            className="min-h-[120px]"
+                            {...field} 
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <Button type="submit" className="w-full size-lg text-base">Send Message</Button>
+                </form>
+              </Form>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+}
