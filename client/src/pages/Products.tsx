@@ -5,45 +5,45 @@ import productImage from "@/assets/products-stack.png";
 const products = [
   {
     id: 1,
-    category: "Pure Cotton",
-    title: "Premium Shirting Cotton",
-    description: "Breathable, lightweight, and durable 100% cotton fabrics perfect for formal and casual wear.",
-    tags: ["Organic", "Breathable", "Soft Finish"]
+    category: "Premium Cotton",
+    title: "Giza Cotton Shirting",
+    description: "Extra-long staple cotton with a silky smooth finish, perfect for luxury formal wear.",
+    tags: ["Egyptian Cotton", "High Thread Count", "Silky Finish"]
   },
   {
     id: 2,
-    category: "Khadi / Handloom",
-    title: "Authentic Khadi Weave",
-    description: "Hand-spun and hand-woven fabric that keeps you cool in summer and warm in winter.",
-    tags: ["Handwoven", "Sustainable", "Textured"]
+    category: "Luxury Linen",
+    title: "European Flax Linen",
+    description: "100% pure European linen, known for its breathability and natural elegance.",
+    tags: ["Imported Flax", "Breathable", "Natural Texture"]
   },
   {
     id: 3,
-    category: "Blended Fabrics",
-    title: "Poly-Viscose Blend",
-    description: "Wrinkle-resistant and easy-care fabrics designed for daily corporate and uniform wear.",
-    tags: ["Durable", "Easy Care", "Wrinkle Free"]
+    category: "Premium Cotton",
+    title: "Organic Cotton Poplin",
+    description: "Crisp, lightweight, and eco-friendly cotton fabric ideal for shirts and dresses.",
+    tags: ["GOTS Certified", "Crisp Hand", "Eco-friendly"]
   },
   {
     id: 4,
-    category: "Polyester",
-    title: "High-Grade Polyester",
-    description: "Strong, resilient, and color-fast fabrics suitable for sportswear and active use.",
-    tags: ["Strong", "Color Fast", "Quick Dry"]
+    category: "Luxury Linen",
+    title: "Washed Linen Blend",
+    description: "Softened linen with a relaxed look, perfect for casual luxury apparel.",
+    tags: ["Softened", "Drapey", "Casual Luxury"]
   },
   {
     id: 5,
-    category: "Pure Cotton",
-    title: "Printed Cotton Voile",
-    description: "Sheer, lightweight cotton with vibrant, eco-friendly prints.",
-    tags: ["Printed", "Sheer", "Eco Dyes"]
+    category: "Premium Cotton",
+    title: "Fine Cotton Voile",
+    description: "Sheer, lightweight cotton with a delicate drape, perfect for summer layers.",
+    tags: ["Sheer", "Lightweight", "Summer Essential"]
   },
   {
     id: 6,
-    category: "Khadi / Handloom",
-    title: "Raw Silk Blend",
-    description: "Luxurious texture combining the sheen of silk with the comfort of cotton.",
-    tags: ["Luxury", "Textured", "Festive"]
+    category: "Luxury Linen",
+    title: "Heavyweight Linen Canvas",
+    description: "Durable and textured linen suitable for structured garments and premium home textiles.",
+    tags: ["Heavyweight", "Durable", "Textured"]
   }
 ];
 
@@ -54,7 +54,7 @@ export default function Products() {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground">Our Collection</h1>
           <p className="text-xl text-muted-foreground">
-            Explore our diverse range of high-quality fabrics crafted for every need.
+            Explore our exclusive range of premium cotton and luxury linen fabrics.
           </p>
         </div>
 
@@ -75,7 +75,6 @@ export default function Products() {
           {products.map((product) => (
             <Card key={product.id} className="group hover:shadow-lg transition-all duration-300 border-border/60 bg-background overflow-hidden">
               <div className="h-48 bg-muted overflow-hidden relative">
-                {/* Placeholder for individual product images - using the main one zoomed for effect if needed, or a colored block */}
                 <div className="w-full h-full bg-gradient-to-br from-muted to-secondary/30 group-hover:scale-105 transition-transform duration-500" />
                 <Badge className="absolute top-4 right-4 bg-primary text-primary-foreground">
                   {product.category}

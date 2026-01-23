@@ -24,13 +24,13 @@ export default function About() {
                 stitched with dedication, hard work, and an unwavering commitment to quality.
               </p>
               <p>
-                We believe that fabric is not just a material; it is an expression of culture, comfort, and character. 
-                Whether it's the breathable comfort of pure cotton or the rugged elegance of khadi, our fabrics 
-                tell a story of authentic craftsmanship.
+                We specialization in pure natural fibers is what sets us apart. We believe that true luxury lies in nature's 
+                finest offerings. From the crisp breathability of our premium cottons to the sophisticated 
+                drape of our pure linens, every fabric we produce is a testament to authentic craftsmanship.
               </p>
               <p>
                 Today, we stand proud as a brand that bridges the gap between traditional Indian textile heritage 
-                and modern fashion needs, serving clients across the globe.
+                and modern fashion needs, serving clients across the globe who appreciate the value of uncompromising quality.
               </p>
             </div>
           </div>

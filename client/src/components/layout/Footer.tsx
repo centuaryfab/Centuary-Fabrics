@@ -23,12 +23,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-foreground">Our Products</h4>
+            <h4 className="font-semibold mb-4 text-foreground">Our Collection</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/products" className="hover:text-primary transition-colors">Pure Cotton</Link></li>
-              <li><Link href="/products" className="hover:text-primary transition-colors">Organic Khadi</Link></li>
-              <li><Link href="/products" className="hover:text-primary transition-colors">Blended Fabrics</Link></li>
-              <li><Link href="/products" className="hover:text-primary transition-colors">Polyester</Link></li>
+              <li><Link href="/products" className="hover:text-primary transition-colors">Premium Cotton</Link></li>
+              <li><Link href="/products" className="hover:text-primary transition-colors">Luxury Linen</Link></li>
+              <li><Link href="/products" className="hover:text-primary transition-colors">Organic Collection</Link></li>
+              <li><Link href="/products" className="hover:text-primary transition-colors">Shirting Fabrics</Link></li>
             </ul>
           </div>
 

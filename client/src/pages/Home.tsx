@@ -20,8 +20,8 @@ export default function Home() {
         
         <div className="container relative z-10 text-center space-y-6 max-w-3xl px-4">
           <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight animate-in fade-in slide-in-from-bottom-8 duration-1000">
-            Quality Fabrics for a <br/>
-            <span className="text-secondary italic">Better Tomorrow</span>
+            Premium Cotton & <br/>
+            <span className="text-secondary italic">Luxury Linen</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
             Blending tradition with innovation to create sustainable, premium textiles that stand the test of time.
@@ -57,20 +57,20 @@ export default function Home() {
             <div className="space-y-6">
               <span className="text-primary font-medium tracking-wide uppercase text-sm">Who We Are</span>
               <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-                Weaving the Future of Textile Industry
+                Masters of Pure Natural Fabrics
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Centuary Fab is a leading manufacturer of premium quality fabrics. 
+                Centuary Fab is a premier manufacturer specializing exclusively in high-count cotton and pure linen fabrics. 
                 Rooted in the rich heritage of Indian textiles, we combine traditional craftsmanship 
-                with modern technology to produce fabrics that are not only beautiful but also durable and sustainable.
+                with modern technology to produce fabrics that represent the pinnacle of natural luxury.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                 {[
-                  "Premium Cotton Quality",
+                  "100% Premium Cotton",
+                  "Pure European Linen",
                   "Eco-friendly Processes",
-                  "Global Export Standards",
-                  "Innovative Blends"
+                  "Global Export Standards"
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle2 className="h-5 w-5 text-primary" />
