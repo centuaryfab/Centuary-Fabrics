@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { ArrowRight, CheckCircle2, Leaf, ShieldCheck } from "lucide-react";
+import { ArrowRight, CheckCircle2, Leaf, ShieldCheck, TrendingUp } from "lucide-react";
 import heroImage from "@/assets/hero-fabric.png";
 import aboutImage from "@/assets/about-craft.png";
 
@@ -24,7 +24,7 @@ export default function Home() {
             <span className="text-secondary italic">Luxury Linen</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-            Blending tradition with innovation to create sustainable, premium textiles that stand the test of time.
+            A venture of G.K. Jain Group. Weaving trust and excellence since 1966.
           </p>
           <div className="pt-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
             <Link href="/products">
@@ -49,8 +49,8 @@ export default function Home() {
                 />
               </div>
               <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-primary p-6 rounded-lg text-primary-foreground flex flex-col justify-center items-center text-center shadow-xl hidden md:flex">
-                <span className="text-5xl font-bold font-heading">25+</span>
-                <span className="text-sm mt-2 font-medium">Years of Excellence</span>
+                <span className="text-5xl font-bold font-heading">50+</span>
+                <span className="text-sm mt-2 font-medium">Years of Legacy</span>
               </div>
             </div>
             
@@ -60,17 +60,16 @@ export default function Home() {
                 Masters of Pure Natural Fabrics
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Centuary Fab is a premier manufacturer specializing exclusively in high-count cotton and pure linen fabrics. 
-                Rooted in the rich heritage of Indian textiles, we combine traditional craftsmanship 
-                with modern technology to produce fabrics that represent the pinnacle of natural luxury.
+                Centuary Fab India Pvt. Ltd. is a premier manufacturer specializing exclusively in high-count cotton and pure linen fabrics. 
+                As part of the esteemed G.K. Jain Group, we carry forward a rich legacy of over five decades in the textile industry.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                 {[
-                  "100% Premium Cotton",
-                  "Pure European Linen",
-                  "Eco-friendly Processes",
-                  "Global Export Standards"
+                  "Heritage since 1966",
+                  "200+ Premium Qualities",
+                  "Network of 250+ Dealers",
+                  "Turnover of ₹300M+"
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle2 className="h-5 w-5 text-primary" />
@@ -108,9 +107,9 @@ export default function Home() {
                 desc: "Every meter of fabric undergoes rigorous quality checks to ensure perfection."
               },
               {
-                icon: Leaf,
-                title: "Sustainability",
-                desc: "Committed to eco-friendly practices, organic materials, and responsible manufacturing."
+                icon: TrendingUp,
+                title: "Business Integrity",
+                desc: "Honesty and transparency have been the cornerstones of our growth for 50 years."
               },
               {
                 icon: CheckCircle2,
