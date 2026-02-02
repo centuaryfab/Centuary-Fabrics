@@ -1,4 +1,4 @@
-import { MapPin, Mail, Clock } from "lucide-react";
+import { MapPin, Mail, Clock, Phone } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -92,14 +92,14 @@ export default function Contact() {
                       className="text-muted-foreground space-y-1"
                       data-testid="text-address"
                     >
-                      <p>centuaryfab</p>
-                      <p>
-                        254, rumugam street, thirunagar colony,
-                        erode-638003
+                      <p data-testid="text-brand">Centuary Fab</p>
+                      <p data-testid="text-street">
+                        254, Arumugam Street, Thirunagar Colony
                       </p>
-                      <p>
-                        Erode, Tamil Nadu 638003, India
+                      <p data-testid="text-city-state-postal">
+                        Erode, Tamil Nadu 638003
                       </p>
+                      <p data-testid="text-country">India</p>
                     </div>
                   </div>
                 </CardContent>
@@ -150,26 +150,35 @@ export default function Contact() {
                       className="text-muted-foreground"
                       data-testid="text-hours"
                     >
-                      9:30 AM  7:00 PM
+                      9:30 AM – 7:00 PM
                     </p>
                   </div>
                 </CardContent>
               </Card>
 
               <Card className="border-none shadow-md bg-muted/30">
-                <CardContent className="p-6">
-                  <h3
-                    className="font-semibold text-lg mb-2"
-                    data-testid="text-phone-title"
+                <CardContent className="p-6 flex items-start gap-4">
+                  <div
+                    className="bg-primary/10 p-3 rounded-full"
+                    data-testid="icon-phone"
                   >
-                    Phone
-                  </h3>
-                  <p
-                    className="text-muted-foreground"
-                    data-testid="text-phone-hidden"
-                  >
-                    Phone number is currently hidden.
-                  </p>
+                    <Phone className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3
+                      className="font-semibold text-lg mb-1"
+                      data-testid="text-phone-title"
+                    >
+                      Phone
+                    </h3>
+                    <a
+                      href="tel:+91XXXXXXXXXX"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                      data-testid="link-phone"
+                    >
+                      +91 XXXXX XXXXX
+                    </a>
+                  </div>
                 </CardContent>
               </Card>
             </div>

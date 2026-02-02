@@ -33,12 +33,38 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-foreground">Contact</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>123 Textile Avenue, Industrial Area</li>
-              <li>Mumbai, Maharashtra 400001</li>
-              <li>+91 98765 43210</li>
-              <li>info@centuaryfab.com</li>
+            <h4
+              className="font-semibold mb-4 text-foreground"
+              data-testid="text-footer-contact-title"
+            >
+              Contact
+            </h4>
+            <ul className="space-y-2 text-sm text-muted-foreground" data-testid="list-footer-contact">
+              <li data-testid="text-footer-brand">Centuary Fab</li>
+              <li data-testid="text-footer-street">
+                254, Arumugam Street, Thirunagar Colony
+              </li>
+              <li data-testid="text-footer-city-state-postal">
+                Erode, Tamil Nadu 638003, India
+              </li>
+              <li>
+                <a
+                  href="mailto:centuaryfab@gmail.com"
+                  className="hover:text-primary transition-colors"
+                  data-testid="link-footer-email"
+                >
+                  centuaryfab@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+91XXXXXXXXXX"
+                  className="hover:text-primary transition-colors"
+                  data-testid="link-footer-phone"
+                >
+                  +91 XXXXX XXXXX
+                </a>
+              </li>
             </ul>
           </div>
         </div>
