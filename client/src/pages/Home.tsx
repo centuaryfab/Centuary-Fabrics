@@ -57,7 +57,7 @@ export default function Home() {
             <div className="space-y-6">
               <span className="text-primary font-medium tracking-wide uppercase text-sm">Who We Are</span>
               <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-                Masters of Pure Natural Fabrics
+                Specialists in Quality Woven Fabrics
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 Centuary Fab India Pvt. Ltd. is a premier manufacturer specializing exclusively in high-count cotton and pure linen fabrics. 
