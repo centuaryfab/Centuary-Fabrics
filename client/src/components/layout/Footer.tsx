@@ -58,7 +58,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+91XXXXXXXXXX"
+                  href="tel:XXXXXXXXXX"
                   className="hover:text-primary transition-colors"
                   data-testid="link-footer-phone"
                 >

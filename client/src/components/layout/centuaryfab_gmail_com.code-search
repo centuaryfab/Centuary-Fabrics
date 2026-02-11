@@ -1,0 +1,22 @@
+# Query: centuaryfab@gmail.com
+# ContextLines: 1
+
+4 results - 2 files
+
+components\layout\Footer.tsx:
+  51                  <a
+  52:                   href="mailto:centuaryfab@gmail.com"
+  53                    className="hover:text-primary transition-colors"
+
+  55                  >
+  56:                   centuaryfab@gmail.com
+  57                  </a>
+
+pages\Contact.tsx:
+  123                      <a
+  124:                       href="mailto:centuaryfab@gmail.com"
+  125                        className="text-muted-foreground hover:text-foreground transition-colors"
+
+  127                      >
+  128:                       centuaryfab@gmail.com
+  129                      </a>
