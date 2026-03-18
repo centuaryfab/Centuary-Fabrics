@@ -11,6 +11,7 @@ import About from "@/pages/About";
 import Products from "@/pages/Products";
 import Contact from "@/pages/Contact";
 import GroupCompanies from "@/pages/GroupCompanies";
+import Cotton from "@/pages/Cotton";
 
 function Router() {
   return (
@@ -23,6 +24,9 @@ function Router() {
           <Route path="/group-companies" component={GroupCompanies} />
           <Route path="/products" component={Products} />
           <Route path="/contact" component={Contact} />
+
+          <Route path="/cotton-fabric" component={Cotton} />
+
           <Route component={NotFound} />
         </Switch>
       </main>
