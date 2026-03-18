@@ -3,20 +3,23 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/not-found";
+
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Products from "@/pages/Products";
 import Contact from "@/pages/Contact";
 import GroupCompanies from "@/pages/GroupCompanies";
 import Cotton from "@/pages/Cotton";
+import NotFound from "@/pages/not-found";
 
 function Router() {
   return (
     <div className="flex flex-col min-h-screen font-sans">
       <Navbar />
+
       <main className="flex-grow">
         <Switch>
           <Route path="/" component={Home} />
@@ -25,11 +28,14 @@ function Router() {
           <Route path="/products" component={Products} />
           <Route path="/contact" component={Contact} />
 
+          {/* ✅ Cotton Page */}
           <Route path="/cotton-fabric" component={Cotton} />
 
+          {/* 404 */}
           <Route component={NotFound} />
         </Switch>
       </main>
+
       <Footer />
     </div>
   );
