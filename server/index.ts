@@ -75,32 +75,27 @@ app.use((req, res, next) => {
     return res.status(status).json({ message });
   });
 
-  // ✅ PRODUCTION FIX FOR RENDER
+  // ✅ PRODUCTION (Render fix)
   if (process.env.NODE_ENV === "production") {
-    const staticPath = path.join(__dirname, "./public");
+    const staticPath = path.join(__dirname, "../public");
 
-    // Serve React build files
     app.use(express.static(staticPath));
 
-    // Fix React routing (VERY IMPORTANT)
-    app.get("*", (req, res) => {
+    app.get("*", (_req, res) => {
       res.sendFile(path.join(staticPath, "index.html"));
     });
   } else {
-    // Dev mode
     const { setupVite } = await import("./vite");
     await setupVite(httpServer, app);
   }
 
   const port = parseInt(process.env.PORT || "5000");
 
-  httpServer.listen(
-    {
-      port,
-      host: "0.0.0.0", // REQUIRED for Render
-    },
-    () => {
-      log(`serving on port ${port}`);
-    }
-  );
+  console.log("🚀 Starting server...");
+
+  // ✅ FIXED LISTEN (IMPORTANT)
+  httpServer.listen(port, "0.0.0.0", () => {
+    console.log(`✅ SERVER RUNNING ON PORT ${port}`);
+  });
+
 })();
