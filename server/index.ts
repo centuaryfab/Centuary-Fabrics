@@ -77,7 +77,7 @@ app.use((req, res, next) => {
 
   // ✅ PRODUCTION FIX FOR RENDER
   if (process.env.NODE_ENV === "production") {
-    const staticPath = path.join(__dirname, "../public");
+    const staticPath = path.join(__dirname, "./public");
 
     // Serve React build files
     app.use(express.static(staticPath));
