@@ -130,6 +130,34 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* SEO Content Section */}
+<section className="py-16 bg-background">
+  <div className="container max-w-5xl mx-auto px-4">
+
+    <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      Premium Fabric Supplier in India – Centuary Fab
+    </h2>
+
+    <p className="text-muted-foreground mb-4 leading-relaxed">
+      Centuary Fab is a trusted name in supplying premium quality fabrics in India, specializing in cotton and linen materials.
+    </p>
+
+    <h2 className="text-xl font-semibold mt-6 mb-2">
+      Cotton Fabric for Shirts
+    </h2>
+    <p className="text-muted-foreground">
+      High-quality cotton fabrics for shirts, uniforms, and daily wear.
+    </p>
+
+    <h2 className="text-xl font-semibold mt-6 mb-2">
+      Linen Fabric Collection
+    </h2>
+    <p className="text-muted-foreground">
+      Premium linen fabrics for modern and stylish clothing.
+    </p>
+
+  </div>
+</section>
     </div>
   );
 }
