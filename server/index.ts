@@ -75,14 +75,16 @@ app.use((req, res, next) => {
     return res.status(status).json({ message });
   });
 
-  // ✅ PRODUCTION (Render fix)
+  // ✅ PRODUCTION FIX FOR RENDER
   if (process.env.NODE_ENV === "production") {
-    // Serve React build
-    app.use(express.static(path.join(__dirname, "../client/dist")));
+    const staticPath = path.join(__dirname, "../public");
 
-    // React routing fix (IMPORTANT)
+    // Serve React build files
+    app.use(express.static(staticPath));
+
+    // Fix React routing (VERY IMPORTANT)
     app.get("*", (req, res) => {
-      res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+      res.sendFile(path.join(staticPath, "index.html"));
     });
   } else {
     // Dev mode
@@ -92,13 +94,13 @@ app.use((req, res, next) => {
 
   const port = parseInt(process.env.PORT || "5000");
 
- httpServer.listen(
-  {
-    port,
-    host: "0.0.0.0",
-  },
-  () => {
-    log(`serving on port ${port}`);
-  }
-);
+  httpServer.listen(
+    {
+      port,
+      host: "0.0.0.0", // REQUIRED for Render
+    },
+    () => {
+      log(`serving on port ${port}`);
+    }
+  );
 })();
