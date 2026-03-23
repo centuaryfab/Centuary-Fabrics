@@ -84,7 +84,9 @@ app.use((req, res, next) => {
     app.get("*", (_req, res) => {
       res.sendFile(path.join(staticPath, "index.html"));
     });
-  } else {
+  } 
+  
+  else {
     const { setupVite } = await import("./vite");
     await setupVite(httpServer, app);
   }
