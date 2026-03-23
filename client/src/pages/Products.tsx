@@ -2,13 +2,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import productImage from "@/assets/products-stack.png";
 
+import cotton1 from "@/assets/cotton1.jpg";
+import cotton2 from "@/assets/cotton2.jpg";
+import cotton3 from "@/assets/cotton3.jpg";
+import cotton4 from "@/assets/cotton4.jpg";
+
 const products = [
   {
     id: 1,
     category: "Premium Cotton",
     title: "Giza Cotton Shirting",
     description: "Extra-long staple cotton with a silky smooth finish, perfect for luxury formal wear.",
-    tags: ["Egyptian Cotton", "High Thread Count", "Silky Finish"]
+    tags: ["Egyptian Cotton", "High Thread Count", "Silky Finish"],
+    images: [cotton1, cotton2, cotton3, cotton4]
   },
   {
     id: 2,
@@ -74,12 +80,17 @@ export default function Products() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product) => (
             <Card key={product.id} className="group hover:shadow-lg transition-all duration-300 border-border/60 bg-background overflow-hidden">
-              <div className="h-48 bg-muted overflow-hidden relative">
-                <div className="w-full h-full bg-gradient-to-br from-muted to-secondary/30 group-hover:scale-105 transition-transform duration-500" />
-                <Badge className="absolute top-4 right-4 bg-primary text-primary-foreground">
-                  {product.category}
-                </Badge>
-              </div>
+              <div className="h-48 overflow-hidden relative">
+  <img 
+    src={product.images?.[0] || productImage}
+    alt={product.title}
+    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+  />
+
+  <Badge className="absolute top-4 right-4 bg-primary text-primary-foreground">
+    {product.category}
+  </Badge>
+</div>
               <CardHeader>
                 <CardTitle className="font-heading text-xl">{product.title}</CardTitle>
                 <div className="flex flex-wrap gap-2 mt-2">
