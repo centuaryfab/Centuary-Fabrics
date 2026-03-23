@@ -92,13 +92,13 @@ app.use((req, res, next) => {
 
   const port = parseInt(process.env.PORT || "5000");
 
-  httpServer.listen(
-    {
-      port,
-      host: "0.0.0.0", // ✅ important for Render
-    },
-    () => {
-      log(`serving on port ${port}`);
-    }
-  );
+ httpServer.listen(
+  {
+    port,
+    host: "0.0.0.0",
+  },
+  () => {
+    log(`serving on port ${port}`);
+  }
+);
 })();
