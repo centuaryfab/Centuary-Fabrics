@@ -14,24 +14,21 @@ const httpServer = createServer(app);
     // ✅ Serve static files
     app.use(express.static(staticPath));
 
-    // ✅ FIRST: register API routes
+    // ✅ API routes first
     await registerRoutes(httpServer, app);
 
-    // ✅ LAST: fallback route for frontend (IMPORTANT)
-    app.get("/(.*)", (_req, res) => {
+    // ✅ FIXED fallback route (IMPORTANT)
+    app.get("/*", (_req, res) => {
       res.sendFile(path.join(staticPath, "index.html"));
     });
 
   } else {
-    // ✅ Development mode (Vite)
     const { setupVite } = await import("./vite");
     await setupVite(httpServer, app);
 
-    // ✅ API routes in dev also
     await registerRoutes(httpServer, app);
   }
 
-  // ✅ Error handler
   app.use((err: any, _req: Request, res: Response, next: NextFunction) => {
     const status = err.status || err.statusCode || 500;
     const message = err.message || "Internal Server Error";
