@@ -38,7 +38,7 @@ export default function Home() {
 
       {/* Intro Section */}
       <section className="py-20 md:py-32 bg-background">
-        <div className="container">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative">
               <div className="aspect-[4/5] rounded-lg overflow-hidden shadow-2xl">
@@ -93,7 +93,7 @@ export default function Home() {
 
       {/* Values Preview */}
       <section className="py-20 bg-muted/30">
-        <div className="container">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-primary font-medium tracking-wide uppercase text-sm">Why Choose Us</span>
             <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2">Core Values That Define Us</h2>
