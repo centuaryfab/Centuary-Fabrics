@@ -14,21 +14,23 @@ const httpServer = createServer(app);
     // ✅ Serve static files
     app.use(express.static(staticPath));
 
-    // ✅ API routes first
+    // ✅ API routes
     await registerRoutes(httpServer, app);
 
-    // ✅ FIXED fallback route (IMPORTANT)
-    app.get("/*", (_req, res) => {
+    // ✅ FINAL FIX (NO wildcard, NO regex)
+    app.use((_req, res) => {
       res.sendFile(path.join(staticPath, "index.html"));
     });
 
   } else {
+    // ✅ Dev mode
     const { setupVite } = await import("./vite");
     await setupVite(httpServer, app);
 
     await registerRoutes(httpServer, app);
   }
 
+  // ✅ Error handler
   app.use((err: any, _req: Request, res: Response, next: NextFunction) => {
     const status = err.status || err.statusCode || 500;
     const message = err.message || "Internal Server Error";
@@ -44,7 +46,7 @@ const httpServer = createServer(app);
 
   console.log("🚀 Starting server...");
 
-  httpServer.listen(port, () => {
+  httpServer.listen(port, "0.0.0.0", () => {
     console.log("✅ SERVER RUNNING ON PORT " + port);
   });
 
