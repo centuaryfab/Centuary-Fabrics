@@ -49,7 +49,7 @@ async function buildAll() {
   await esbuild({
     entryPoints: ["server/index.ts"],
     platform: "node",
-    bundle: false,
+    bundle: true,
     format: "cjs",
     outfile: "dist/index.cjs",
     define: {
