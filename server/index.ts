@@ -1,3 +1,5 @@
+const path = require("path"); // ✅ ADD THIS LINE
+
 (async () => {
 
   // ✅ PRODUCTION FIRST (IMPORTANT ORDER)
