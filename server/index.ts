@@ -77,7 +77,7 @@ app.use((req, res, next) => {
 
   // ✅ PRODUCTION (Render fix)
   if (process.env.NODE_ENV === "production") {
-    const staticPath = path.join(__dirname, "./public");
+    const staticPath = path.join(process.cwd(), "dist/public");
 
     app.use(express.static(staticPath));
 
