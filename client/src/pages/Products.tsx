@@ -11,10 +11,10 @@ const products = [
   {
     id: 1,
     category: "Premium Cotton",
-    title: "Giza Cotton Shirting",
+    title: "lamp of asia",
     description: "Extra-long staple cotton with a silky smooth finish, perfect for luxury formal wear.",
     tags: ["Egyptian Cotton", "High Thread Count", "Silky Finish"],
-    images: [cotton1]
+    images: [fabric.jpg]
   },
   {
     id: 2,
