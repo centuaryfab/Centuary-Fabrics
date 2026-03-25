@@ -14,7 +14,7 @@ const products = [
     title: "Giza Cotton Shirting",
     description: "Extra-long staple cotton with a silky smooth finish, perfect for luxury formal wear.",
     tags: ["Egyptian Cotton", "High Thread Count", "Silky Finish"],
-    images: [cotton1, cotton2, cotton3, cotton4]
+    images: [cotton1]
   },
   {
     id: 2,
