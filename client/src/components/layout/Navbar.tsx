@@ -47,7 +47,7 @@ export default function Navbar() {
 
           {/* ✅ WHATSAPP BUTTON (DESKTOP) */}
           <a 
-            href="https://wa.me/918148008588
+            href="https://wa.me/918148008588"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-green-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-600 transition"
@@ -87,7 +87,7 @@ export default function Navbar() {
 
                 {/* ✅ WHATSAPP BUTTON (MOBILE) */}
                 <a 
-                  href="https://wa.me/91814808588
+                  href="https://wa.me/91814808588"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-500 text-white px-4 py-3 rounded-lg text-center mt-4"
