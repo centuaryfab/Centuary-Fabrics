@@ -54,6 +54,8 @@ export default function Contact() {
   return (
     <div className="min-h-screen pt-10 pb-20">
       <div className="max-w-7xl mx-auto px-6 max-w-6xl">
+
+        {/* Page Header */}
         <div className="text-center mb-12 space-y-4">
           <h1
             className="font-heading text-4xl md:text-5xl font-bold text-foreground"
@@ -69,7 +71,9 @@ export default function Contact() {
           </p>
         </div>
 
+        {/* Two-column layout: Info + Form */}
         <div className="grid lg:grid-cols-2 gap-12">
+
           {/* Contact Info */}
           <div className="space-y-8" data-testid="section-business-info">
             <div className="grid gap-6">
@@ -290,6 +294,30 @@ export default function Contact() {
             </CardContent>
           </Card>
         </div>
+
+        {/* Google Map Section */}
+        <div className="mt-16" data-testid="section-map">
+          <h2
+            className="font-heading text-2xl font-semibold mb-6 text-foreground"
+            data-testid="text-map-title"
+          >
+            Our Location
+          </h2>
+          <div className="rounded-2xl overflow-hidden shadow-lg w-full h-[380px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4808.179379981675!2d77.71786827588647!3d11.353753188832318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba96f33bfad08f1%3A0xeccba746c62c537a!2scentuaryfab!5e1!3m2!1sen!2sin!4v1774526187858!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Centuary Fab Location"
+              data-testid="embed-map"
+            />
+          </div>
+        </div>
+
       </div>
     </div>
   );
