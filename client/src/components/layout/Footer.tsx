@@ -62,7 +62,7 @@ export default function Footer() {
                   className="hover:text-primary transition-colors"
                   data-testid="link-footer-phone"
                 >
-                  +91 XXXXX XXXXX
+                  +918148008588
                 </a>
               </li>
             </ul>
