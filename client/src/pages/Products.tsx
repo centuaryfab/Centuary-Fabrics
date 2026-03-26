@@ -9,7 +9,7 @@ const products = [
   {
     id: 1,
     category: "Premium Cotton",
-    title: "Timeless Cotton Classics
+    title: "Egyptian Cotton Sateen",
     description: "Soft, smooth premium cotton fabric.",
     image: cotton1
   },
