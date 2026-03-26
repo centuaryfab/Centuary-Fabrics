@@ -1,10 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-import cotton1 from "@/assets/cotton1.jpg";
-import cotton2 from "@/assets/cotton2.jpg";
-import cotton3 from "@/assets/cotton3.jpg";
-import cotton4 from "@/assets/cotton4.jpg";
+// ✅ USE EXISTING IMAGES FROM YOUR FOLDER
+import cotton1 from "@/assets/product-stack.png";
+import cotton2 from "@/assets/hero.png";
+import cotton3 from "@/assets/about-craft.png";
+import cotton4 from "@/assets/product-stack.png";
 
 const products = [
   {
@@ -111,7 +112,7 @@ export default function Products() {
                 </CardTitle>
 
                 <div className="flex flex-wrap gap-2 mt-2">
-                  {product.tags.map(tag => (
+                  {product.tags?.map(tag => (
                     <span
                       key={tag}
                       className="text-xs bg-muted px-2 py-1 rounded-full text-muted-foreground"
