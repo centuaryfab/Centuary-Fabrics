@@ -227,7 +227,7 @@ function Sidebar({
         )}
       />
       <div
-        data-slot="sidebar-container"
+        data-slot="sidebar-max-w-7xl mx-auto px-6"
         className={cn(
           "fixed inset-y-0 z-10 hidden h-svh w-[var(--sidebar-width)] transition-[left,right,width] duration-200 ease-linear md:flex",
           side === "left"

@@ -53,7 +53,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen pt-10 pb-20">
-      <div className="container max-w-6xl">
+      <div className="max-w-7xl mx-auto px-6 max-w-6xl">
         <div className="text-center mb-12 space-y-4">
           <h1
             className="font-heading text-4xl md:text-5xl font-bold text-foreground"

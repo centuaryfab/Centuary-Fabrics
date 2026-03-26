@@ -38,7 +38,7 @@ export default function About() {
 
   return (
     <div className="min-h-screen pt-10 pb-20">
-      <div className="container space-y-20">
+      <div className="max-w-7xl mx-auto px-6 space-y-20">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="text-primary font-medium tracking-wide uppercase text-sm">G.K. Jain Group</span>
@@ -99,7 +99,7 @@ export default function About() {
             <div className="h-1 w-20 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="relative max-w-4xl mx-auto">
+          <div className="relative max-w-5xl mx-auto px-4">
             {/* Vertical Line */}
             <div className="absolute left-[15px] md:left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2"></div>
 

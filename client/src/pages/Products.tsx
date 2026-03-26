@@ -56,7 +56,7 @@ const products = [
 export default function Products() {
   return (
     <div className="min-h-screen pt-10 pb-20 bg-muted/20">
-      <div className="container space-y-12">
+      <div className="max-w-7xl mx-auto px-6 space-y-12">
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground">Our Collection</h1>
           <p className="text-xl text-muted-foreground">

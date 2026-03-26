@@ -10,7 +10,7 @@ import associatedImage from "@/assets/company-lalitha.png";
 export default function GroupCompanies() {
   return (
     <div className="min-h-screen pt-10 pb-20">
-      <div className="container space-y-16">
+      <div className="max-w-7xl mx-auto px-6 space-y-16">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="text-primary font-medium tracking-wide uppercase text-sm">G.K. Jain Group</span>

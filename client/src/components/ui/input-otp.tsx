@@ -7,12 +7,12 @@ import { cn } from "@/lib/utils"
 const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>,
   React.ComponentPropsWithoutRef<typeof OTPInput>
->(({ className, containerClassName, ...props }, ref) => (
+>(({ className, max-w-7xl mx-auto px-6ClassName, ...props }, ref) => (
   <OTPInput
     ref={ref}
-    containerClassName={cn(
+    max-w-7xl mx-auto px-6ClassName={cn(
       "flex items-center gap-2 has-[:disabled]:opacity-50",
-      containerClassName
+      max-w-7xl mx-auto px-6ClassName
     )}
     className={cn("disabled:cursor-not-allowed", className)}
     {...props}

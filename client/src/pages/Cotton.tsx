@@ -1,6 +1,6 @@
 export default function Cotton() {
   return (
-    <div className="container max-w-5xl mx-auto py-16 px-4">
+    <div className="max-w-7xl mx-auto px-6 max-w-5xl mx-auto py-16 px-4">
 
       <h1 className="text-3xl md:text-4xl font-bold mb-6">
         Premium Cotton Fabric Supplier in India

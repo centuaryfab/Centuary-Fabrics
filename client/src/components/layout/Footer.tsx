@@ -3,7 +3,7 @@ import { Link } from "wouter";
 export default function Footer() {
   return (
     <footer className="w-full border-t bg-muted/40">
-      <div className="container py-10 md:py-16">
+      <div className="max-w-7xl mx-auto px-6 py-10 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <h3 className="font-heading text-xl font-bold text-primary">Centuary Fab</h3>
