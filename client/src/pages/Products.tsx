@@ -36,8 +36,13 @@ export default function Products() {
 
         {/* Title */}
         <h1 className="text-3xl font-semibold text-gray-900">
-          Our Premium Fabrics
+            Premium Cotton & Linen Fabrics in India | Centuary Fab
         </h1>
+
+        <p className="text-gray-600 max-w-3xl">
+Centuary Fab offers premium quality cotton and linen fabrics designed for durability, comfort, and elegance. 
+Our collection includes luxury cotton and breathable linen fabrics ideal for shirts, uniforms, and premium garments.
+</p>
 
         {/* Products */}
         <div className="space-y-8">
