@@ -1,137 +1,58 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-
-// ✅ USE EXISTING IMAGES FROM YOUR FOLDER
 import cotton1 from "@/assets/product-stack.png";
 import cotton2 from "@/assets/hero.png";
 import cotton3 from "@/assets/about-craft.png";
-import cotton4 from "@/assets/product-stack.png";
 
 const products = [
   {
     id: 1,
-    category: "Premium Cotton",
     title: "Lamp of Asia",
-    description: "Extra-long staple cotton with a silky smooth finish, perfect for luxury formal wear.",
-    tags: ["Egyptian Cotton", "High Thread Count", "Silky Finish"],
-    images: [cotton1]
+    description: "Premium cotton fabric",
+    image: cotton1,
   },
   {
     id: 2,
-    category: "Luxury Linen",
     title: "European Flax Linen",
-    description: "100% pure European linen, known for its breathability and natural elegance.",
-    tags: ["Imported Flax", "Breathable", "Natural Texture"],
-    images: [cotton2]
+    description: "Luxury linen fabric",
+    image: cotton2,
   },
   {
     id: 3,
-    category: "Premium Cotton",
     title: "Organic Cotton Poplin",
-    description: "Crisp, lightweight, and eco-friendly cotton fabric ideal for shirts and dresses.",
-    tags: ["GOTS Certified", "Crisp Hand", "Eco-friendly"],
-    images: [cotton3]
+    description: "Eco-friendly cotton",
+    image: cotton3,
   },
-  {
-    id: 4,
-    category: "Luxury Linen",
-    title: "Washed Linen Blend",
-    description: "Softened linen with a relaxed look, perfect for casual luxury apparel.",
-    tags: ["Softened", "Drapey", "Casual Luxury"],
-    images: [cotton4]
-  },
-  {
-    id: 5,
-    category: "Premium Cotton",
-    title: "Fine Cotton Voile",
-    description: "Sheer, lightweight cotton with a delicate drape, perfect for summer layers.",
-    tags: ["Sheer", "Lightweight", "Summer Essential"],
-    images: [cotton1]
-  },
-  {
-    id: 6,
-    category: "Luxury Linen",
-    title: "Heavyweight Linen Canvas",
-    description: "Durable and textured linen suitable for structured garments and premium home textiles.",
-    tags: ["Heavyweight", "Durable", "Textured"],
-    images: [cotton2]
-  }
 ];
 
 export default function Products() {
   return (
-    <div className="min-h-screen pt-10 pb-20 bg-muted/20">
-      <div className="max-w-7xl mx-auto px-6 space-y-12">
+    <div style={{ padding: "40px" }}>
+      <h1 style={{ fontSize: "32px", marginBottom: "20px" }}>
+        Products Page ✅
+      </h1>
 
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground">
-            Our Collection
-          </h1>
-          <p className="text-xl text-muted-foreground">
-            Explore our exclusive range of premium cotton and luxury linen fabrics.
-          </p>
-        </div>
+      <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
+        {products.map((product) => (
+          <div
+            key={product.id}
+            style={{
+              width: "300px",
+              border: "1px solid #ddd",
+              borderRadius: "10px",
+              overflow: "hidden",
+            }}
+          >
+            <img
+              src={product.image}
+              alt={product.title}
+              style={{ width: "100%", height: "200px", objectFit: "cover" }}
+            />
 
-        {/* Featured Image */}
-        <div className="rounded-xl overflow-hidden h-[400px] shadow-md relative">
-          <img 
-            src={cotton1}
-            alt="Fabric Collection"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-            <h2 className="text-white font-heading text-4xl font-bold drop-shadow-lg">
-              Exquisite Textures & Colors
-            </h2>
+            <div style={{ padding: "10px" }}>
+              <h2>{product.title}</h2>
+              <p>{product.description}</p>
+            </div>
           </div>
-        </div>
-
-        {/* Product Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product) => (
-            <Card
-              key={product.id}
-              className="group hover:shadow-lg transition-all duration-300 border-border/60 bg-background overflow-hidden"
-            >
-              <div className="h-48 overflow-hidden relative">
-                <img 
-                  src={product.images?.[0] || cotton1}
-                  alt={product.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-
-                <Badge className="absolute top-4 right-4 bg-primary text-primary-foreground">
-                  {product.category}
-                </Badge>
-              </div>
-
-              <CardHeader>
-                <CardTitle className="font-heading text-xl">
-                  {product.title}
-                </CardTitle>
-
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {product.tags?.map(tag => (
-                    <span
-                      key={tag}
-                      className="text-xs bg-muted px-2 py-1 rounded-full text-muted-foreground"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </CardHeader>
-
-              <CardContent>
-                <CardDescription className="text-base">
-                  {product.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
+        ))}
       </div>
     </div>
   );
