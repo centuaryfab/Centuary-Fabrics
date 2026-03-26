@@ -42,7 +42,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground" data-testid="list-footer-contact">
               <li data-testid="text-footer-brand">Centuary Fab</li>
               <li data-testid="text-footer-street">
-                5/1, Narayan Kovil St, water office road
+                5/1, Narayan Kovil Street, water office road
               </li>
               <li data-testid="text-footer-city-state-postal">
                 Erode, Tamil Nadu 638003, India
