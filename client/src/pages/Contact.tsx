@@ -98,7 +98,7 @@ export default function Contact() {
                     >
                       <p data-testid="text-brand">Centuary Fab</p>
                       <p data-testid="text-street">
-                        254, Arumugam Street, Thirunagar Colony
+                        5/1, Narayan Kovil St, water office road
                       </p>
                       <p data-testid="text-city-state-postal">
                         Erode, Tamil Nadu 638003
