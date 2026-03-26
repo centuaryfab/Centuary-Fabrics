@@ -1,3 +1,14 @@
+import { Switch, Route } from "wouter";
+import Home from "@/pages/Home";
+import Products from "@/pages/Products";
+
 export default function App() {
-  return <h1 style={{color:"black"}}>APP WORKING ✅</h1>;
+  return (
+    <div>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/products" component={Products} />
+      </Switch>
+    </div>
+  );
 }
