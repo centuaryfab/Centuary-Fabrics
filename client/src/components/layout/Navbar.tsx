@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -20,14 +20,16 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="max-w-7xl mx-auto px-6 flex h-16 items-center justify-between">
+
+        {/* Logo */}
         <div className="flex items-center gap-2">
           <Link href="/" className="font-heading text-2xl font-bold tracking-tight text-primary">
-              Centuary Fab
+            Centuary Fab
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-6">
+        <div className="hidden md:flex items-center gap-6">
           {links.map((link) => (
             <Link 
               key={link.href} 
@@ -42,6 +44,16 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+
+          {/* ✅ WHATSAPP BUTTON (DESKTOP) */}
+          <a 
+            href="https://wa.me/918148008588
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-600 transition"
+          >
+            WhatsApp Us
+          </a>
         </div>
 
         {/* Mobile Navigation */}
@@ -53,8 +65,10 @@ export default function Navbar() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
+
             <SheetContent side="right">
               <div className="flex flex-col space-y-4 mt-8">
+
                 {links.map((link) => (
                   <Link 
                     key={link.href} 
@@ -70,10 +84,22 @@ export default function Navbar() {
                     {link.label}
                   </Link>
                 ))}
+
+                {/* ✅ WHATSAPP BUTTON (MOBILE) */}
+                <a 
+                  href="https://wa.me/91814808588
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-500 text-white px-4 py-3 rounded-lg text-center mt-4"
+                >
+                  WhatsApp Us
+                </a>
+
               </div>
             </SheetContent>
           </Sheet>
         </div>
+
       </div>
     </nav>
   );
