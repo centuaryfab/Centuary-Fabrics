@@ -172,11 +172,11 @@ export default function Contact() {
                       Phone
                     </h3>
                     <a
-                      href="tel:+91XXXXXXXXXX"
+                      href="tel:+918148008588"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                       data-testid="link-phone"
                     >
-                      +91 XXXXX XXXXX
+                      +918148008588
                     </a>
                   </div>
                 </CardContent>
