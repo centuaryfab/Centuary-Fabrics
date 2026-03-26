@@ -9,7 +9,7 @@ const products = [
   {
     id: 1,
     category: "Premium Cotton",
-    title: "Lamp of Asia",
+    title: "Timeless Cotton Classics
     description: "Soft, smooth premium cotton fabric.",
     image: cotton1
   },
