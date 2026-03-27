@@ -200,7 +200,6 @@ export default function Contact() {
 
               <Form {...form}>
                 <form
-                  <form
                   action="https://formspree.io/f/xyzabcd"
                   method="POST"
                   className="space-y-6"
