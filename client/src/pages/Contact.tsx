@@ -200,7 +200,9 @@ export default function Contact() {
 
               <Form {...form}>
                 <form
-                  onSubmit={form.handleSubmit(onSubmit)}
+                  <form
+                  action="https://formspree.io/f/xyzabcd"
+                  method="POST"
                   className="space-y-6"
                   data-testid="form-contact"
                 >
