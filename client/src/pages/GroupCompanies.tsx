@@ -1,8 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { Factory, Zap, Building2, ArrowRight, CheckCircle2 } from "lucide-react";
+
 import millsImage from "@/assets/company-centuary-mills.png";
 import powerImage from "@/assets/company-sun-gracee.png";
 import associatedImage from "@/assets/company-lalitha.png";
