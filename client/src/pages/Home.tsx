@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, ShieldCheck, TrendingUp } from "lucide-react";
 import heroImage from "@/assets/hero.png";
-import aboutImage from "@/assets/about-craft.png";
 
 export default function Home() {
   return (
