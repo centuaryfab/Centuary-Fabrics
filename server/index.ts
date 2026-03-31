@@ -42,7 +42,7 @@ const httpServer = createServer(app);
     return res.status(status).json({ message });
   });
 
-  const port = parseInt(process.env.PORT || "5000");
+  const port = parseInt(process.env.PORT || "10000");
 
   console.log("🚀 Starting server...");
 
