@@ -69,8 +69,8 @@ export default function CraftsmanshipJourney() {
 
   useEffect(() => {
     const panels = panelRefs.current;
+    const isMobile = window.innerWidth < 768;
 
-    // ✅ Initial state (only first visible)
     panels.forEach((el, i) => {
       gsap.set(el, {
         autoAlpha: i === 0 ? 1 : 0,
@@ -87,8 +87,8 @@ export default function CraftsmanshipJourney() {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top top",
-        end: "+=5000",
-        scrub: 1.8,
+        end: isMobile ? "+=3500" : "+=5000",
+        scrub: isMobile ? 1.2 : 1.8,
       },
     });
 
@@ -96,40 +96,29 @@ export default function CraftsmanshipJourney() {
       const image = imageRefs.current[i];
       const text = panel.querySelector(".text-content");
 
-      // Show panel
-      tl.to(
-        panel,
-        {
-          autoAlpha: 1,
-          y: 0,
-          filter: "blur(0px)",
-          duration: 0.8,
-          ease: "power2.out",
-        },
-        i
-      );
+      tl.to(panel, {
+        autoAlpha: 1,
+        y: 0,
+        filter: "blur(0px)",
+        duration: 0.8,
+      }, i);
 
-      // Image animation
-      tl.fromTo(
-        image,
+      tl.fromTo(image,
         {
           opacity: 0.4,
-          x: i % 2 === 0 ? 60 : -60,
+          x: i % 2 === 0 ? 40 : -40,
           scale: 1.05,
         },
         {
           opacity: 1,
           x: 0,
           scale: 1,
-          duration: 1.2,
-          ease: "power4.out",
+          duration: isMobile ? 0.8 : 1.2,
         },
         i + 0.1
       );
 
-      // Text animation
-      tl.fromTo(
-        text,
+      tl.fromTo(text,
         {
           opacity: 0,
           y: 30,
@@ -137,36 +126,23 @@ export default function CraftsmanshipJourney() {
         {
           opacity: 1,
           y: 0,
-          duration: 1,
-          ease: "power4.out",
+          duration: isMobile ? 0.7 : 1,
         },
         i + 0.4
       );
 
-      // Hold + zoom
-      tl.to(
-        image,
-        {
-          scale: 1.06,
-          duration: 2,
-          ease: "none",
-        },
-        i + 0.6
-      );
+      tl.to(image, {
+        scale: isMobile ? 1.03 : 1.06,
+        duration: 2,
+      }, i + 0.6);
 
-      // Hide previous panel
       if (i > 0) {
-        tl.to(
-          panels[i - 1],
-          {
-            autoAlpha: 0,
-            y: -20,
-            filter: "blur(6px)",
-            duration: 1,
-            ease: "power2.inOut",
-          },
-          i
-        );
+        tl.to(panels[i - 1], {
+          autoAlpha: 0,
+          y: -20,
+          filter: "blur(6px)",
+          duration: 1,
+        }, i);
       }
     });
 
@@ -176,7 +152,7 @@ export default function CraftsmanshipJourney() {
   }, []);
 
   return (
-    <div ref={containerRef} className="h-[500vh] bg-[#f5f0ea]">
+    <div ref={containerRef} className="h-[500vh] bg-[#f5f0ea] overflow-x-hidden">
       <div className="sticky top-0 h-screen overflow-hidden">
 
         {SECTIONS.map((sec, i) => (
@@ -185,9 +161,14 @@ export default function CraftsmanshipJourney() {
             ref={(el) => {
               if (el) panelRefs.current[i] = el;
             }}
-            className="absolute inset-0 flex items-center justify-center px-6 md:px-12 pointer-events-none"
+            className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 md:px-12 pointer-events-none"
           >
-            <div className={`grid md:grid-cols-2 gap-10 max-w-6xl w-full ${sec.layout === "reverse" ? "md:flex-row-reverse" : ""}`}>
+            <div className={`
+              flex flex-col md:grid md:grid-cols-2
+              gap-6 md:gap-10
+              max-w-6xl w-full
+              items-center
+            `}>
 
               {/* Image */}
               <img
@@ -196,20 +177,24 @@ export default function CraftsmanshipJourney() {
                 }}
                 src={sec.image}
                 alt={sec.alt}
-                className="w-full h-[400px] object-cover rounded"
+                className="w-full h-[220px] sm:h-[260px] md:h-[400px] object-cover rounded"
               />
 
               {/* Text */}
-              <div className="text-content flex flex-col justify-center space-y-4">
-                <p className="text-xs tracking-widest text-gray-400">{sec.num} / 05</p>
+              <div className="text-content flex flex-col justify-center space-y-3 md:space-y-4">
+                <p className="text-xs tracking-widest text-gray-400">
+                  {sec.num} / 05
+                </p>
 
-                <h2 className="text-4xl font-semibold leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight">
                   {sec.title[0]} <br /> {sec.title[1]}
                 </h2>
 
-                <p className="italic text-gray-500">{sec.caption}</p>
+                <p className="italic text-gray-500 text-sm sm:text-base">
+                  {sec.caption}
+                </p>
 
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                   {sec.desc}
                 </p>
               </div>
