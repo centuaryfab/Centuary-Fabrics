@@ -71,13 +71,14 @@ export default function CraftsmanshipJourney() {
     const panels = panelRefs.current;
 
     // Initial state (all hidden)
-    panels.forEach((el) => {
-      gsap.set(el, {
-        opacity: 0,
-        y: 40,
-        filter: "blur(6px)",
-      });
-    });
+   panels.forEach((el, i) => {
+    gsap.set(el, {
+     opacity: i === 0 ? 1 : 0,
+     y: i === 0 ? 0 : 40,
+     filter: i === 0 ? "blur(0px)" : "blur(6px)",
+     zIndex: i === 0 ? 2 : 1,
+  });
+});
 
     imageRefs.current.forEach((img) => {
       gsap.set(img, { scale: 1 });
