@@ -1,3 +1,4 @@
+import CraftsmanshipJourney from "../components/CraftsmanshipJourney";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -6,9 +7,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center justify-center bg-black text-white">
-        
         <div className="max-w-3xl mx-auto px-4 text-center space-y-6">
-
           <h1 className="text-4xl md:text-6xl font-bold">
             Premium Cotton & Linen Fabric Manufacturer in India
           </h1>
@@ -22,14 +21,12 @@ export default function Home() {
               Explore Our Collection
             </a>
           </Link>
-
         </div>
       </section>
 
       {/* About */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-6 text-center space-y-6">
-
           <h2 className="text-3xl font-bold">
             Specialists in Premium Fabric Manufacturing
           </h2>
@@ -44,20 +41,20 @@ export default function Home() {
             <div>✅ 250+ Dealers</div>
             <div>✅ Trusted Quality</div>
           </div>
-
         </div>
       </section>
+
+      {/* 🔥 Craftsmanship Section */}
+      <CraftsmanshipJourney />
 
       {/* Values */}
       <section className="py-20 bg-gray-100">
         <div className="max-w-6xl mx-auto px-6 text-center">
-
           <h2 className="text-3xl font-bold mb-10">
             Why Choose Centuary Fab
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
-            
             <div className="bg-white p-6 rounded shadow">
               <div className="text-2xl mb-2">🛡️</div>
               <h3 className="font-bold">Quality Assurance</h3>
@@ -72,9 +69,7 @@ export default function Home() {
               <div className="text-2xl mb-2">✅</div>
               <h3 className="font-bold">Customer Trust</h3>
             </div>
-
           </div>
-
         </div>
       </section>
 

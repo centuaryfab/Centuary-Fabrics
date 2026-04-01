@@ -1,3 +1,4 @@
+import CraftsmanshipJourney from "./components/CraftsmanshipJourney";
 import { Switch, Route } from "wouter";
 
 import Navbar from "@/components/layout/Navbar";
