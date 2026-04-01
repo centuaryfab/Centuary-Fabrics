@@ -70,12 +70,12 @@ export default function CraftsmanshipJourney() {
   useEffect(() => {
     const panels = panelRefs.current;
 
-    // Initial state
-    panels.forEach((el, i) => {
+    // Initial state (all hidden)
+    panels.forEach((el) => {
       gsap.set(el, {
-        opacity: i === 0 ? 1 : 0,
-        y: i === 0 ? 0 : 40,
-        filter: i === 0 ? "blur(0px)" : "blur(6px)",
+        opacity: 0,
+        y: 40,
+        filter: "blur(6px)",
       });
     });
 
@@ -93,25 +93,10 @@ export default function CraftsmanshipJourney() {
     });
 
     panels.forEach((panel, i) => {
-      if (i === 0) return;
-
       const image = imageRefs.current[i];
       const text = panel.querySelector(".text-content");
 
-      // Fade out previous
-      tl.to(
-        panels[i - 1],
-        {
-          opacity: 0,
-          y: -20,
-          filter: "blur(6px)",
-          duration: 1,
-          ease: "power2.inOut",
-        },
-        i
-      );
-
-      // Image entry (half fade + slide)
+      // IMAGE ENTRY
       tl.fromTo(
         image,
         {
@@ -126,10 +111,10 @@ export default function CraftsmanshipJourney() {
           duration: 1.2,
           ease: "power4.out",
         },
-        i + 0.1
+        i
       );
 
-      // Text entry
+      // TEXT ENTRY
       tl.fromTo(
         text,
         {
@@ -142,10 +127,23 @@ export default function CraftsmanshipJourney() {
           duration: 1,
           ease: "power4.out",
         },
-        i + 0.4
+        i + 0.3
       );
 
-      // Keep both visible + zoom
+      // PANEL VISIBLE
+      tl.to(
+        panel,
+        {
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
+          duration: 0.8,
+          ease: "power2.out",
+        },
+        i
+      );
+
+      // HOLD + IMAGE ZOOM
       tl.to(
         image,
         {
@@ -155,6 +153,21 @@ export default function CraftsmanshipJourney() {
         },
         i + 0.5
       );
+
+      // FADE OUT (except last)
+      if (i < panels.length - 1) {
+        tl.to(
+          panel,
+          {
+            opacity: 0,
+            y: -20,
+            filter: "blur(6px)",
+            duration: 1,
+            ease: "power2.inOut",
+          },
+          i + 2.2
+        );
+      }
     });
 
     return () => {
