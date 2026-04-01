@@ -70,7 +70,7 @@ export default function CraftsmanshipJourney() {
   useEffect(() => {
     const panels = panelRefs.current;
 
-    // Initial state (with blur for depth)
+    // Initial state
     panels.forEach((el, i) => {
       gsap.set(el, {
         opacity: i === 0 ? 1 : 0,
@@ -95,43 +95,65 @@ export default function CraftsmanshipJourney() {
     panels.forEach((panel, i) => {
       if (i === 0) return;
 
+      const image = imageRefs.current[i];
+      const text = panel.querySelector(".text-content");
+
       // Fade out previous
       tl.to(
         panels[i - 1],
         {
           opacity: 0,
-          y: -30,
+          y: -20,
           filter: "blur(6px)",
-          duration: 1.2,
-          ease: "power3.inOut",
+          duration: 1,
+          ease: "power2.inOut",
         },
         i
       );
 
-      // Fade in current
+      // Image entry (half fade + slide)
       tl.fromTo(
-        panel,
-        { opacity: 0, y: 40, filter: "blur(6px)" },
+        image,
+        {
+          opacity: 0.4,
+          x: i % 2 === 0 ? 60 : -60,
+          scale: 1.05,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          scale: 1,
+          duration: 1.2,
+          ease: "power4.out",
+        },
+        i + 0.1
+      );
+
+      // Text entry
+      tl.fromTo(
+        text,
+        {
+          opacity: 0,
+          y: 30,
+        },
         {
           opacity: 1,
           y: 0,
-          filter: "blur(0px)",
-          duration: 1.2,
-          ease: "power3.inOut",
+          duration: 1,
+          ease: "power4.out",
         },
-        i
+        i + 0.4
       );
 
-      // Image parallax + zoom
+      // Keep both visible + zoom
       tl.to(
-        imageRefs.current[i],
+        image,
         {
-          scale: 1.08,
-          y: -20,
-          duration: 2.5,
+          scale: 1.06,
+          duration: 2,
           ease: "none",
         },
-        i
+        i + 0.5
       );
     });
 
@@ -154,6 +176,7 @@ export default function CraftsmanshipJourney() {
           >
             <div className={`grid md:grid-cols-2 gap-10 max-w-6xl w-full ${sec.layout === "reverse" ? "md:flex-row-reverse" : ""}`}>
 
+              {/* Image */}
               <img
                 ref={(el) => {
                   if (el) imageRefs.current[i] = el;
@@ -163,7 +186,8 @@ export default function CraftsmanshipJourney() {
                 className="w-full h-[400px] object-cover rounded"
               />
 
-              <div className="flex flex-col justify-center space-y-4">
+              {/* Text */}
+              <div className="text-content flex flex-col justify-center space-y-4">
                 <p className="text-xs tracking-widest text-gray-400">{sec.num} / 05</p>
 
                 <h2 className="text-4xl font-semibold leading-tight">
