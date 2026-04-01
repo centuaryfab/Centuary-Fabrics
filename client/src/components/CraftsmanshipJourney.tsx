@@ -70,15 +70,14 @@ export default function CraftsmanshipJourney() {
   useEffect(() => {
     const panels = panelRefs.current;
 
-    // Initial state (all hidden)
-   panels.forEach((el, i) => {
-    gsap.set(el, {
-     opacity: i === 0 ? 1 : 0,
-     y: i === 0 ? 0 : 40,
-     filter: i === 0 ? "blur(0px)" : "blur(6px)",
-     zIndex: i === 0 ? 2 : 1,
-  });
-});
+    // ✅ Initial state (only first visible)
+    panels.forEach((el, i) => {
+      gsap.set(el, {
+        autoAlpha: i === 0 ? 1 : 0,
+        y: i === 0 ? 0 : 40,
+        filter: i === 0 ? "blur(0px)" : "blur(6px)",
+      });
+    });
 
     imageRefs.current.forEach((img) => {
       gsap.set(img, { scale: 1 });
@@ -97,7 +96,20 @@ export default function CraftsmanshipJourney() {
       const image = imageRefs.current[i];
       const text = panel.querySelector(".text-content");
 
-      // IMAGE ENTRY
+      // Show panel
+      tl.to(
+        panel,
+        {
+          autoAlpha: 1,
+          y: 0,
+          filter: "blur(0px)",
+          duration: 0.8,
+          ease: "power2.out",
+        },
+        i
+      );
+
+      // Image animation
       tl.fromTo(
         image,
         {
@@ -112,10 +124,10 @@ export default function CraftsmanshipJourney() {
           duration: 1.2,
           ease: "power4.out",
         },
-        i
+        i + 0.1
       );
 
-      // TEXT ENTRY
+      // Text animation
       tl.fromTo(
         text,
         {
@@ -128,23 +140,10 @@ export default function CraftsmanshipJourney() {
           duration: 1,
           ease: "power4.out",
         },
-        i + 0.3
+        i + 0.4
       );
 
-      // PANEL VISIBLE
-      tl.to(
-        panel,
-        {
-          opacity: 1,
-          y: 0,
-          filter: "blur(0px)",
-          duration: 0.8,
-          ease: "power2.out",
-        },
-        i
-      );
-
-      // HOLD + IMAGE ZOOM
+      // Hold + zoom
       tl.to(
         image,
         {
@@ -152,21 +151,21 @@ export default function CraftsmanshipJourney() {
           duration: 2,
           ease: "none",
         },
-        i + 0.5
+        i + 0.6
       );
 
-      // FADE OUT (except last)
-      if (i < panels.length - 1) {
+      // Hide previous panel
+      if (i > 0) {
         tl.to(
-          panel,
+          panels[i - 1],
           {
-            opacity: 0,
+            autoAlpha: 0,
             y: -20,
             filter: "blur(6px)",
             duration: 1,
             ease: "power2.inOut",
           },
-          i + 2.2
+          i
         );
       }
     });
@@ -186,7 +185,7 @@ export default function CraftsmanshipJourney() {
             ref={(el) => {
               if (el) panelRefs.current[i] = el;
             }}
-            className="absolute inset-0 flex items-center justify-center px-6 md:px-12"
+            className="absolute inset-0 flex items-center justify-center px-6 md:px-12 pointer-events-none"
           >
             <div className={`grid md:grid-cols-2 gap-10 max-w-6xl w-full ${sec.layout === "reverse" ? "md:flex-row-reverse" : ""}`}>
 
