@@ -3,33 +3,18 @@ import SEOHead from "../components/SEOHead";
 const milestones = [
   {
     year: "1966",
-    title: "The Foundation",
-    description:
-      "Established as a textile trading venture by the G.K. Jain family.",
-  },
-  {
-    year: "1990s",
-    title: "Erode Expansion",
-    description:
-      "Expanded operations to Erode, India’s textile hub.",
+    title: "Foundation",
+    description: "Started as a textile trading business.",
   },
   {
     year: "1995",
-    title: "Processing Mills",
-    description:
-      "Launched in-house fabric processing unit.",
-  },
-  {
-    year: "2004",
-    title: "Growth Phase",
-    description:
-      "Corporate expansion and modernization.",
+    title: "Processing Unit",
+    description: "Established in-house fabric processing.",
   },
   {
     year: "2021",
     title: "Centuary Fab",
-    description:
-      "Premium fabric manufacturing division launched.",
+    description: "Premium manufacturing division launched.",
   },
 ];
 
@@ -38,7 +23,7 @@ export default function About({ navigate }: any) {
     <>
       <SEOHead
         title="About Centuary Fab | Textile Company in Erode"
-        description="Centuary Fab is a leading textile company in Erode manufacturing premium cotton and linen fabrics."
+        description="Centuary Fab is a leading textile company in Erode manufacturing premium cotton and linen fabrics in India."
         keywords="textile company erode, cotton fabric india, linen fabrics"
         canonical="https://www.centuaryfab.com/about"
       />
@@ -52,7 +37,7 @@ export default function About({ navigate }: any) {
           </h1>
 
           <p className="text-gray-600 text-lg">
-            Centuary Fab is a premium textile manufacturer based in Erode, India,
+            We are a premium textile manufacturer based in Erode,
             specializing in cotton and linen fabrics.
           </p>
         </section>
@@ -80,7 +65,7 @@ export default function About({ navigate }: any) {
             Explore Our Fabrics
           </h2>
 
-          <div className="flex gap-4 justify-center">
+          <div className="flex gap-4 justify-center flex-wrap">
             <button
               onClick={() => navigate("cotton-fabrics-india")}
               className="bg-black text-white px-6 py-3"
