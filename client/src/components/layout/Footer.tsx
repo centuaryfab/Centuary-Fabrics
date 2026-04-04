@@ -2,80 +2,70 @@ import { Link } from "wouter";
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t bg-muted/40">
-      <div className="max-w-7xl mx-auto px-6 py-10 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
-            <h3 className="font-heading text-xl font-bold text-primary">Centuary Fab</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Weaving excellence since 1995. Quality fabrics for a better, sustainable tomorrow.
+    <footer className="w-full border-t bg-[#f8f4ee]">
+      
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        
+        {/* GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
+
+          {/* BRAND */}
+          <div>
+            <h3 className="text-xl font-semibold mb-3">Centuary Fab</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Weaving excellence since 1995. Crafting premium fabrics with precision,
+              tradition, and sustainability.
             </p>
           </div>
-          
+
+          {/* LINKS */}
           <div>
-            <h4 className="font-semibold mb-4 text-foreground">Quick Links</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
-              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="/products" className="hover:text-primary transition-colors">Products</Link></li>
-              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+            <h4 className="font-semibold mb-3">Quick Links</h4>
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/about">About</Link></li>
+              <li><Link href="/products">Products</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
 
+          {/* COLLECTION */}
           <div>
-            <h4 className="font-semibold mb-4 text-foreground">Our Collection</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/products" className="hover:text-primary transition-colors">Premium Cotton</Link></li>
-              <li><Link href="/products" className="hover:text-primary transition-colors">Luxury Linen</Link></li>
-              <li><Link href="/products" className="hover:text-primary transition-colors">Organic Collection</Link></li>
-              <li><Link href="/products" className="hover:text-primary transition-colors">Shirting Fabrics</Link></li>
+            <h4 className="font-semibold mb-3">Collections</h4>
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li>Shirting</li>
+              <li>Suiting</li>
+              <li>Sheeting</li>
+              <li>Dhoties</li>
+              <li>Ritual Fabrics</li>
             </ul>
           </div>
 
+          {/* CONTACT */}
           <div>
-            <h4
-              className="font-semibold mb-4 text-foreground"
-              data-testid="text-footer-contact-title"
-            >
-              Contact
-            </h4>
-            <ul className="space-y-2 text-sm text-muted-foreground" data-testid="list-footer-contact">
-              <li data-testid="text-footer-brand">Centuary Fab</li>
-              <li data-testid="text-footer-street">
-                5/1, Natrayan Kovil St, water office road
-              </li>
-              <li data-testid="text-footer-city-state-postal">
-                Erode, Tamil Nadu 638003, India
-              </li>
-              <li>
-                <a
-                  href="mailto:centuaryfab@gmail.com"
-                  className="hover:text-primary transition-colors"
-                  data-testid="link-footer-email"
-                >
-                  centuaryfab@gmail.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:XXXXXXXXXX"
-                  className="hover:text-primary transition-colors"
-                  data-testid="link-footer-phone"
-                >
-                  +918148008588
-                </a>
-              </li>
+            <h4 className="font-semibold mb-3">Contact</h4>
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li>Centuary Fab</li>
+              <li>5/1, Natrayan Kovil St</li>
+              <li>Water Office Road</li>
+              <li>Erode, Tamil Nadu 638003</li>
+              <li>centuaryfab@gmail.com</li>
+              <li>+91 8148008588</li>
             </ul>
           </div>
+
         </div>
-        
-        <div className="mt-10 pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Centuary Fab. All rights reserved.</p>
+
+        {/* BOTTOM */}
+        <div className="mt-10 pt-6 border-t flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-3">
+          <p>© {new Date().getFullYear()} Centuary Fab. All rights reserved.</p>
+
           <div className="flex gap-4">
-            <a href="#" className="hover:text-primary">Privacy Policy</a>
-            <a href="#" className="hover:text-primary">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
           </div>
         </div>
+
       </div>
     </footer>
   );

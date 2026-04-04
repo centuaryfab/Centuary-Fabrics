@@ -11,22 +11,22 @@ const httpServer = createServer(app);
   if (process.env.NODE_ENV === "production") {
     const staticPath = path.join(process.cwd(), "dist/public");
 
+    // ✅ API routes FIRST
+    await registerRoutes(httpServer, app);
+
     // ✅ Serve static files
     app.use(express.static(staticPath));
 
-    // ✅ API routes
-    await registerRoutes(httpServer, app);
-
-    // ✅ FINAL FIX (NO wildcard, NO regex)
+    // ✅ SPA fallback (React routing)
     app.use((_req, res) => {
       res.sendFile(path.join(staticPath, "index.html"));
     });
 
   } else {
-    // ✅ Dev mode
+    // ✅ Dev mode (Vite)
     const { setupVite } = await import("./vite");
-    await setupVite(httpServer, app);
 
+    await setupVite(httpServer, app);
     await registerRoutes(httpServer, app);
   }
 
@@ -35,7 +35,7 @@ const httpServer = createServer(app);
     const status = err.status || err.statusCode || 500;
     const message = err.message || "Internal Server Error";
 
-    console.error("Internal Server Error:", err);
+    console.error("❌ Server Error:", err);
 
     if (res.headersSent) return next(err);
 

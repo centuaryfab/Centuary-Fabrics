@@ -1,75 +1,73 @@
 import CraftsmanshipJourney from "../components/CraftsmanshipJourney";
+import ProductCategories from "../components/ProductCategories";
 import { Link } from "wouter";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
 
-      {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center bg-black text-white">
-        <div className="max-w-3xl mx-auto px-4 text-center space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold">
+      {/* HERO */}
+      <section className="h-[80vh] flex items-center justify-center bg-black text-white">
+        <div className="text-center space-y-6 px-4">
+
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             Premium Cotton & Linen Fabric Manufacturer in India
           </h1>
 
-          <p className="text-gray-300">
-            Centuary Fab is a leading manufacturer of premium cotton and linen fabrics in India.
+          <p className="text-gray-300 max-w-xl mx-auto">
+            Centuary Fab is a leading premium fabric manufacturer delivering quality, innovation, and excellence.
           </p>
 
+          {/* ✅ BUTTON FIXED */}
           <Link href="/products">
-            <a className="inline-block px-6 py-3 bg-white text-black rounded">
+            <a className="inline-block px-8 py-3 bg-white text-black rounded-full font-medium hover:bg-gray-200 hover:scale-105 transition duration-300">
               Explore Our Collection
             </a>
           </Link>
+
         </div>
       </section>
 
-      {/* About */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-6 text-center space-y-6">
-          <h2 className="text-3xl font-bold">
-            Specialists in Premium Fabric Manufacturing
-          </h2>
+      {/* ABOUT */}
+      <section className="py-20 text-center px-4">
+        <h2 className="text-3xl md:text-4xl font-bold">
+          Specialists in Premium Fabric Manufacturing
+        </h2>
 
-          <p>
-            With 50+ years of experience, we provide high-quality fabrics across India.
-          </p>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-            <div>✅ 50+ Years</div>
-            <div>✅ 200+ Fabrics</div>
-            <div>✅ 250+ Dealers</div>
-            <div>✅ Trusted Quality</div>
-          </div>
-        </div>
+        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          With 50+ years of textile excellence, we deliver high-quality fabrics across India with trust and innovation.
+        </p>
       </section>
 
-      {/* 🔥 Craftsmanship Section */}
+      {/* CRAFT */}
       <CraftsmanshipJourney />
 
-      {/* Values */}
-      <section className="py-20 bg-gray-100">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-10">
-            Why Choose Centuary Fab
-          </h2>
+      {/* ✅ PRODUCT CATEGORIES (CORRECT POSITION) */}
+      <ProductCategories />
 
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded shadow">
-              <div className="text-2xl mb-2">🛡️</div>
-              <h3 className="font-bold">Quality Assurance</h3>
-            </div>
+      {/* WHY */}
+      <section className="py-20 bg-gray-100 text-center px-4">
+        <h2 className="text-3xl md:text-4xl font-bold mb-10">
+          Why Choose Centuary Fab
+        </h2>
 
-            <div className="bg-white p-6 rounded shadow">
-              <div className="text-2xl mb-2">📈</div>
-              <h3 className="font-bold">Business Integrity</h3>
-            </div>
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
 
-            <div className="bg-white p-6 rounded shadow">
-              <div className="text-2xl mb-2">✅</div>
-              <h3 className="font-bold">Customer Trust</h3>
-            </div>
+          <div className="bg-white p-8 rounded-xl shadow hover:shadow-lg transition">
+            <div className="text-3xl mb-3">🛡️</div>
+            <h3 className="font-semibold">Quality Assurance</h3>
           </div>
+
+          <div className="bg-white p-8 rounded-xl shadow hover:shadow-lg transition">
+            <div className="text-3xl mb-3">📈</div>
+            <h3 className="font-semibold">Business Integrity</h3>
+          </div>
+
+          <div className="bg-white p-8 rounded-xl shadow hover:shadow-lg transition">
+            <div className="text-3xl mb-3">✅</div>
+            <h3 className="font-semibold">Customer Trust</h3>
+          </div>
+
         </div>
       </section>
 

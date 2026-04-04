@@ -1,4 +1,3 @@
-import CraftsmanshipJourney from "./components/CraftsmanshipJourney";
 import { Switch, Route } from "wouter";
 
 import Navbar from "@/components/layout/Navbar";
@@ -19,8 +18,8 @@ export default function App() {
       {/* Navbar */}
       <Navbar />
 
-      {/* Main Content */}
-      <main className="flex-grow p-4">
+      {/* Main Content — no pt-24 here; each page manages its own top spacing */}
+      <main className="flex-grow">
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/about" component={About} />
@@ -35,8 +34,8 @@ export default function App() {
       {/* Footer */}
       <Footer />
 
-      {/* ✅ FLOATING WHATSAPP BUTTON */}
-      <a 
+      {/* Floating WhatsApp Button */}
+      <a
         href="https://wa.me/918148008588?text=Hi%20I%20am%20interested%20in%20your%20fabric%20collection"
         target="_blank"
         rel="noopener noreferrer"
