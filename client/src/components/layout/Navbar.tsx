@@ -14,6 +14,7 @@ export default function Navbar() {
       <div className="hidden md:flex gap-8 text-sm font-medium">
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
+        <Link href="/group-companies">Group Companies</Link>
         <Link href="/products">Products</Link>
         <Link href="/contact">Contact</Link>
       </div>
@@ -33,6 +34,7 @@ export default function Navbar() {
         <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center gap-6 py-6 md:hidden">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
+          <Link href="/group-companies">Group Companies</Link>
           <Link href="/products">Products</Link>
           <Link href="/contact">Contact</Link>
         </div>
