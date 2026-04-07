@@ -1,3 +1,5 @@
+import BlogDetail from "@/pages/BlogDetail";
+import Blog from "@/pages/Blog";
 import { Switch, Route } from "wouter";
 
 import Navbar from "@/components/layout/Navbar";
@@ -18,14 +20,19 @@ export default function App() {
       {/* Navbar */}
       <Navbar />
 
-      {/* Main Content — no pt-24 here; each page manages its own top spacing */}
-      <main className="flex-grow">
+      {/* Main Content */}
+      <main className="flex-grow pt-20">
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/group-companies" component={GroupCompanies} />
           <Route path="/products" component={Products} />
           <Route path="/contact" component={Contact} />
+
+          {/* ✅ FIXED ORDER */}
+          <Route path="/blog/:slug" component={BlogDetail} />
+          <Route path="/blog" component={Blog} />
+
           <Route path="/cotton-fabric" component={Cotton} />
           <Route component={NotFound} />
         </Switch>
@@ -34,7 +41,7 @@ export default function App() {
       {/* Footer */}
       <Footer />
 
-      {/* Floating WhatsApp Button */}
+      {/* WhatsApp */}
       <a
         href="https://wa.me/918148008588?text=Hi%20I%20am%20interested%20in%20your%20fabric%20collection"
         target="_blank"
