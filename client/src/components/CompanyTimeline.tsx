@@ -219,11 +219,11 @@ function Card({ item, align = "left", isActive }) {
       </h3>
       <p
         style={{
-          fontSize: "0.82rem",
+          fontSize: "0.9rem",
           fontWeight: 300,
           lineHeight: 1.85,
           color: "#7C7166",
-          maxWidth: "30ch",
+          maxWidth: "100%",
         }}
         className={isRight ? "ml-auto" : ""}
       >
@@ -386,7 +386,7 @@ export default function CompanyTimeline() {
         </div>
 
         {/* ── MOBILE (< md) ── */}
-        <div className="md:hidden relative pl-10">
+        <div className="md:hidden relative pl-6 pr-2">
           <div className="cfi-line-mobile" aria-hidden="true" />
 
           <div className="flex flex-col gap-14">
@@ -406,7 +406,7 @@ export default function CompanyTimeline() {
                 >
                   {/* Dot aligned to left line */}
                   <div
-                    className="absolute -left-10 top-7"
+                    className="absolute -left-10 top-6"
                     style={{ transform: "translateX(calc(1.25rem - 6px))" }}
                   >
                     <Dot isActive={isActive} />

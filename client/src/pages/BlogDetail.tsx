@@ -33,7 +33,7 @@ export default function BlogDetail() {
               The article you are looking for does not exist.
             </p>
 
-            <Link href="/blog" className="bd-back">
+            <Link href="/blog" className="bd-back"> 
               ← Return to Journal
             </Link>
           </div>
