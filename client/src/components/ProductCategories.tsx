@@ -5,31 +5,31 @@ const categories = [
     id: "01",
     name: "Shirting",
     desc: "Premium cotton & linen shirting fabrics",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200",
+    image:  "/images/products/shirting.jpg",
   },
   {
     id: "02",
     name: "Suiting",
     desc: "High quality suiting materials",
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1200",
+    image: "/images/products/suiting.jpg",
   },
   {
     id: "03",
     name: "Sheeting",
     desc: "Soft & breathable fabrics",
-    image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200",
+    image: "/images/products/sheeting.jpg",
   },
   {
     id: "04",
     name: "Dhoties",
     desc: "Traditional premium dhoties",
-    image: "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=1200",
+    image: "/images/products/dhoties.jpg",
   },
   {
     id: "05",
     name: "Ritual",
     desc: "Sacred ritual fabrics",
-    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200",
+    image:"/images/products/ritual.jpg",
   },
 ];
 

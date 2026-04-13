@@ -132,21 +132,41 @@ const CSS = `
    DATA
 ───────────────────────────────────────────────────────────────────────────── */
 const CATS = [
-  { num: "01", title: "Shirting", tagline: "Everyday Refinement",
-    desc: "Precision-woven cottons and poly-cotton blends delivering breathable comfort and crisp drape from morning to evening.",
-    img: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=1400&q=80" },
-  { num: "02", title: "Suiting", tagline: "Commanding Presence",
-    desc: "Sophisticated wool-blend and polyester suiting fabrics for the modern professional who demands both form and function.",
-    img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1400&q=80" },
-  { num: "03", title: "Sheeting", tagline: "Restful Luxury",
-    desc: "High thread-count, supremely soft sheets engineered to transform every bedroom into a haven of quiet indulgence.",
-    img: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1400&q=80" },
-  { num: "04", title: "Dhoties", tagline: "Timeless Tradition",
-    desc: "Pure, pristine cottons in time-honoured weaves — rooted in culture, worn with quiet dignity and generational pride.",
-    img: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1400&q=80" },
-  { num: "05", title: "Ritual Fabrics", tagline: "Woven with Intention",
-    desc: "Sacred textiles crafted for life's most meaningful ceremonies, honouring India's diverse spiritual heritage.",
-    img: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&w=1400&q=80" },
+  {
+    num: "01",
+    title: "Shirting",
+    tagline: "Everyday Refinement",
+    desc: "Precision-woven cottons and poly-cotton blends delivering breathable comfort and crisp drape.",
+    img: "/images/categories/shirting.jpg",
+  },
+  {
+    num: "02",
+    title: "Suiting",
+    tagline: "Commanding Presence",
+    desc: "Sophisticated suiting fabrics for the modern professional.",
+    img: "/images/categories/suiting.jpg",
+  },
+  {
+    num: "03",
+    title: "Sheeting",
+    tagline: "Restful Luxury",
+    desc: "Soft and breathable fabrics for comfort and elegance.",
+    img: "/images/categories/sheeting.jpg",
+  },
+  {
+    num: "04",
+    title: "Dhoties",
+    tagline: "Timeless Tradition",
+    desc: "Pure cotton dhoties rooted in Indian culture.",
+    img: "/images/categories/dhoties.jpg",
+  },
+  {
+    num: "05",
+    title: "Ritual Fabrics",
+    tagline: "Woven with Intention",
+    desc: "Sacred textiles crafted for ceremonies and traditions.",
+    img: "/images/categories/ritual.jpg",
+  },
 ];
 
 const RITUALS = [
@@ -184,16 +204,14 @@ const FEATS = [
     text: "Sustainable sourcing and low-impact dye processes — fabric you can feel good wearing.",
     icon: "M24 40 Q10 28 10 18 A14 14 0 0 1 38 18 Q38 28 24 40Z M24 40 L24 26 M18 30 Q21 26 24 28" },
 ];
-
 const GAL = [
-  { src: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=700&q=80", tall: true },
-  { src: "https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=700&q=80" },
-  { src: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=700&q=80" },
-  { src: "https://images.unsplash.com/photo-1464380573004-8ca85a08751a?auto=format&fit=crop&w=700&q=80" },
-  { src: "https://images.unsplash.com/photo-1550639525-c97d455acf70?auto=format&fit=crop&w=700&q=80" },
-  { src: "https://images.unsplash.com/photo-1524117074681-31bd4de22ad3?auto=format&fit=crop&w=700&q=80" },
+  { src: "/images/gallery/fabric1.jpg", tall: true },
+  { src: "/images/gallery/fabric2.jpg" },
+  { src: "/images/gallery/fabric3.jpg" },
+  { src: "/images/gallery/fabric4.jpg" },
+  { src: "/images/gallery/fabric5.jpg" },
+  { src: "/images/gallery/fabric6.jpg" },
 ];
-
 /* ─────────────────────────────────────────────────────────────────────────────
    SMALL ATOMS
 ───────────────────────────────────────────────────────────────────────────── */
@@ -338,8 +356,16 @@ function About() {
         {/* Image */}
         <div className="rv d2" style={{ position: "relative" }}>
           <div style={{ overflow: "hidden", height: 520 }}>
-            <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=800&q=80"
-              alt="Fine fabric" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+            <img
+  src="/images/about-fabric.jpg"
+  alt="Fine fabric"
+  style={{
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    display: "block",
+  }}
+/>
           </div>
           <div style={{ position: "absolute", top: -18, right: -18, width: "55%", height: "55%", border: `1px solid ${G}`, zIndex: -1, opacity: .35 }} />
           <div style={{ position: "absolute", bottom: -18, left: -18, width: "40%", height: "40%", border: `1px solid ${G}`, zIndex: -1, opacity: .22 }} />
