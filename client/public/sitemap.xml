@@ -1,24 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-<loc>https://centuaryfab.com/</loc>
-<priority>1.00</priority>
-</url>
+  <!-- HOME -->
+  <url>
+    <loc>https://centuaryfab.com/</loc>
+    <priority>1.00</priority>
+  </url>
 
-<url>
-<loc>https://centuaryfab.com/about</loc>
-<priority>0.80</priority>
-</url>
+  <!-- MAIN PAGES -->
+  <url>
+    <loc>https://centuaryfab.com/about</loc>
+  </url>
 
-<url>
-<loc>https://centuaryfab.com/products</loc>
-<priority>0.80</priority>
-</url>
+  <url>
+    <loc>https://centuaryfab.com/products</loc>
+  </url>
 
-<url>
-<loc>https://centuaryfab.com/contact</loc>
-<priority>0.80</priority>
-</url>
+  <url>
+    <loc>https://centuaryfab.com/blog</loc>
+  </url>
+
+  <url>
+    <loc>https://centuaryfab.com/contact</loc>
+  </url>
+
+  <!-- BLOGS -->
+  <url>
+    <loc>https://centuaryfab.com/blog/art-of-premium-cotton-fabrics</loc>
+  </url>
+
+  <url>
+    <loc>https://centuaryfab.com/blog/linen-future-of-sustainable-fashion</loc>
+  </url>
+
+  <url>
+    <loc>https://centuaryfab.com/blog/understanding-fabric-dyeing-finishing</loc>
+  </url>
+
+  <url>
+    <loc>https://centuaryfab.com/blog/ritual-fabrics-indian-culture</loc>
+  </url>
+
+  <url>
+    <loc>https://centuaryfab.com/blog/choosing-the-right-shirting-fabric</loc>
+  </url>
+
+  <url>
+    <loc>https://centuaryfab.com/blog/fabric-manufacturer-india-guide</loc>
+  </url>
+
+  <url>
+    <loc>https://centuaryfab.com/blog/centuary-fab-erode-fabric-manufacturer</loc>
+  </url>
+
+  <url>
+    <loc>https://centuaryfab.com/blog/how-to-choose-quality-shirting-fabric</loc>
+  </url>
 
 </urlset>

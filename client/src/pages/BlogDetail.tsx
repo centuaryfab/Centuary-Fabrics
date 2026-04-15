@@ -13,35 +13,40 @@ const gradients = [
 export default function BlogDetail() {
   const { slug } = useParams<{ slug: string }>();
 
-  // ✅ SAFE FETCH (NO CRASH)
   const post = posts.find((p) => p.slug === slug);
   const postIndex = posts.findIndex((p) => p.slug === slug);
 
   return (
     <div className="bd-root">
       <div className="bd-inner">
-      
-      <Helmet>
-  <title>
-    {post ? `${post.title} | Centuary Fab` : "Centuary Fab Blog"}
-  </title>
 
-  <meta
-    name="description"
-    content={
-      post
-        ? post.description
-        : "Explore textile insights, cotton, linen, and fabric knowledge from Centuary Fab."
-    }
-  />
-</Helmet>
+        {/* ✅ SEO FIXED */}
+        <Helmet>
+          <title>
+            {post ? `${post.title} | Centuary Fab` : "Centuary Fab Blog"}
+          </title>
 
-        {/* ✅ Back Button FIXED */}
+          <meta
+            name="description"
+            content={
+              post
+                ? post.description
+                : "Explore textile insights, cotton, linen, and fabric knowledge from Centuary Fab."
+            }
+          />
+
+          {/* ✅ IMPORTANT */}
+          <link
+            rel="canonical"
+            href={`https://www.centuaryfab.com/blog/${slug}`}
+          />
+        </Helmet>
+
+        {/* BACK */}
         <Link href="/blog" className="bd-back">
           ← Back to Journal
         </Link>
 
-        {/* ❌ NOT FOUND */}
         {!post ? (
           <div className="bd-notfound">
             <h2 className="bd-notfound-title">Article Not Found</h2>
@@ -49,7 +54,7 @@ export default function BlogDetail() {
               The article you are looking for does not exist.
             </p>
 
-            <Link href="/blog" className="bd-back"> 
+            <Link href="/blog" className="bd-back">
               ← Return to Journal
             </Link>
           </div>

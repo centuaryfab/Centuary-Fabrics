@@ -13,7 +13,7 @@ export const posts: BlogPost[] = [
   {
     id: 1,
     slug: "art-of-premium-cotton-fabrics",
-    tag: "premium Cotton",
+    tag: "Cotton",
     date: "April 2026",
     title: "The Art of Premium Cotton Fabrics",
     description:
@@ -29,17 +29,22 @@ export const posts: BlogPost[] = [
   {
     id: 2,
     slug: "linen-future-of-sustainable-fashion",
-    tag: "modern Linen",
+    tag: "Linen",
     date: "March 2026",
     title: "Why Linen is the Future of Sustainable Fashion",
     description:
       "Discover why linen fabrics are rapidly becoming the top choice for eco-conscious designers.",
     image: "/images/blog/blog2.jpg",
-    content: ["In an era of increasing environmental awareness, linen has emerged as the textile industry's most compelling answer to sustainability. Derived from the flax plant — one of the oldest cultivated crops known to humanity — linen is a fabric whose ecological credentials are matched only by its timeless elegance.",
-      "Flax requires significantly less water than cotton to cultivate, often thriving on rainfall alone. Every part of the plant finds use: seeds yield linseed oil, fibres become fabric, and residual plant matter is composted back into the soil. It is a closed-loop crop in the truest sense.",
-      "The fibre itself is extraordinary. Linen is stronger than cotton, naturally resistant to bacteria, and grows softer and more lustrous with each wash. Unlike synthetic alternatives, it biodegrades fully at the end of its life — leaving no trace on the earth that grew it.",
-      "For fashion brands, linen offers creative versatility. Its natural slub texture lends an organic, artisanal quality to garments. It drapes beautifully in warm months and layers elegantly in cooler seasons. Available in a spectrum from raw undyed naturals to richly saturated tones, linen adapts to every aesthetic.",
-      "At Centuary Fab, our linen range is processed with low-impact dyes and finished without harmful chemicals. We believe that sustainable fabric need not compromise on refinement — and our linen collection is the proof.",],
+    content: [
+  "Flax requires significantly less water than cotton to cultivate, often thriving on rainfall alone. Every part of the plant finds use.",
+  
+  "Centuary Fab Erode is a leading fabric manufacturer specializing in cotton and linen fabrics.",
+
+  "The fibre itself is extraordinary. Linen is stronger than cotton, naturally resistant to bacteria, and grows softer and more lustrous with each wash. Unlike synthetic alternatives, it biodegrades fully at the end of its life — leaving no trace on the earth that grew it.",
+
+  "For fashion brands, linen offers creative versatility. Its natural slub texture lends an organic, artisanal quality.",
+
+  "At Centuary Fab, our linen range is processed with low-impact dyes and finished without harmful chemicals.",],
   },
   {
     id: 3,
@@ -52,6 +57,7 @@ export const posts: BlogPost[] = [
     image: "/images/blog/blog3.jpg",
     content: ["The journey from grey fabric to a finished textile ready for a designer's studio is one of the most technically demanding — and artistically rewarding — processes in manufacturing. Dyeing and finishing are where science, craft, and creativity converge.",
       "Dyeing begins with preparation. Fabrics must be scoured to remove natural waxes and impurities, then bleached to a clean, receptive base. The fibre type dictates the dye class: reactive dyes for cotton and linen, acid dyes for silk and wool, disperse dyes for polyester. Each requires precise temperature, pH, and timing to achieve the intended result.",
+      "Centuary Fab Erode is a leading fabric manufacturer specializing in cotton and linen fabrics.",
       "Colour matching is an art in itself. Our colourists work from Pantone and custom client swatches, building dye recipes that reproduce exact shades across large batch runs — a consistency that mass-market processes frequently fail to achieve. Wash-fastness, light-fastness, and crocking tests are performed at every stage.",
       "Finishing follows dyeing and determines a fabric's final personality. Mechanical finishing processes — calendering for smoothness, sanforisation for dimensional stability, raising for softness — shape how a fabric feels and behaves in wear. Chemical finishes add properties such as wrinkle-resistance, water repellency, or anti-microbial protection.",
       "At Centuary Fab, every finishing decision is made in service of the fabric's end use. A fine shirting cloth demands a different hand than a heavy suiting or a delicate voile. Understanding that distinction — and executing it with consistency — is the craft that separates premium textile processing from the ordinary.",
@@ -81,11 +87,13 @@ export const posts: BlogPost[] = [
     description:
       "Understand how fabric choice shapes fit and feel.",
     image: "/images/blog/blog5.jpg",
-    content: ["A shirt is only as good as the fabric from which it is cut. Thread count, weave structure, fibre composition, and finish all determine whether a shirt will feel premium from the first wear or lose its appeal after a season. Knowing how to choose the right shirting fabric is the first step toward building a wardrobe that endures.",
-      "Poplin — also called broadcloth — is the benchmark of formal shirting. Its plain weave produces a smooth, tight surface with a subtle sheen that reads as crisp and professional. High-thread-count poplin in long-staple cotton is the fabric of choice for dress shirts and business wear. It presses beautifully and holds its structure through a full working day.",
-      "Oxford cloth offers a more relaxed alternative. Its basket weave creates a slightly textured surface with more body than poplin. Pin Oxford and Royal Oxford are refined enough for business casual; heavier Oxfords suit weekend and casual settings. The weave's natural give makes it forgiving in fit and comfortable across long hours.",
-      "Linen shirting occupies a category of its own. Its characteristic slub texture and breathability make it ideal for warm climates and informal occasions. While it creases readily — a property some wearers embrace as part of its aesthetic — enzyme-washed or blended linen shirting offers a more relaxed approach to the crease.",
-      "For the discerning buyer, the test of a shirting fabric lies in its handle. Roll a corner gently in the hand: premium cotton should feel smooth and cool, with a confident weight that springs back without wrinkling excessively. Trust that hand — it tells you everything about how the finished shirt will wear.",],
+    content: ["Choosing the right shirting fabric is essential for both comfort and appearance. High-quality fabric enhances both the look and durability of garments.",
+    "Cotton and linen are among the most preferred fabrics for shirts due to their breathability and natural feel. These materials provide comfort throughout the day, especially in warm climates.",
+    "Thread count, weave type, and finishing processes play a major role in fabric quality. A well-made fabric feels smooth, holds its structure, and maintains its appearance over time.",
+    "In textile hubs like Erode, manufacturers focus on combining traditional weaving techniques with modern technology to produce world-class fabrics.",
+    "Centuary Fab offers premium shirting fabrics that meet the needs of modern fashion brands and businesses across India.",
+    "Our fabrics are designed for comfort, durability, and elegance, making them ideal for both formal and casual wear.",
+    "If you are looking for high-quality shirting fabric, choosing the right manufacturer ensures long-term value and customer satisfaction.",],
   },
 {
   id: 6,
@@ -107,7 +115,7 @@ export const posts: BlogPost[] = [
 },
 {
   id: 7,
-  slug: "Centuary Fab Erode is becoming a preferred choice for premium cotton and linen fabric manufacturing in India.",
+  slug: "centuary-fab-erode-fabric-manufacturer",
   tag: "Brand Story",
   date: "April 2026",
   title: "Centuary Fab: Premium Fabric Manufacturer in Erode",
@@ -115,6 +123,7 @@ export const posts: BlogPost[] = [
     "Centuary Fab is a leading fabric manufacturer in Erode, specializing in premium cotton and linen fabrics. Discover our journey, quality, and expertise in textile manufacturing.",
   image: "/images/blog/blog7.jpg",
   content: [
+  "Centuary Fab Erode is becoming a preferred choice for premium cotton and linen fabric manufacturing in India.",
     "Centuary Fab is a trusted name in the textile industry, known for premium fabric manufacturing in Erode, Tamil Nadu.",
     "With a strong focus on quality and craftsmanship, Centuary Fab specializes in cotton and linen fabrics for modern apparel and textile businesses.",
     "Located in Erode, one of India’s leading textile hubs, Centuary Fab combines traditional weaving techniques with modern manufacturing processes.",
@@ -122,5 +131,5 @@ export const posts: BlogPost[] = [
     "Centuary Fab serves clients across India, offering reliable fabric supply for wholesalers, retailers, and fashion brands.",
     "If you are searching for a fabric manufacturer in Erode, Centuary Fab stands as a symbol of quality, trust, and textile excellence.",
   ],
-}
+},
 ];
