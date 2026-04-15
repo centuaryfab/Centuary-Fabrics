@@ -13,7 +13,7 @@ export const posts: BlogPost[] = [
   {
     id: 1,
     slug: "art-of-premium-cotton-fabrics",
-    tag: "Cotton",
+    tag: "premium Cotton",
     date: "April 2026",
     title: "The Art of Premium Cotton Fabrics",
     description:
@@ -29,7 +29,7 @@ export const posts: BlogPost[] = [
   {
     id: 2,
     slug: "linen-future-of-sustainable-fashion",
-    tag: "Linen",
+    tag: "modern Linen",
     date: "March 2026",
     title: "Why Linen is the Future of Sustainable Fashion",
     description:
@@ -87,4 +87,39 @@ export const posts: BlogPost[] = [
       "Linen shirting occupies a category of its own. Its characteristic slub texture and breathability make it ideal for warm climates and informal occasions. While it creases readily — a property some wearers embrace as part of its aesthetic — enzyme-washed or blended linen shirting offers a more relaxed approach to the crease.",
       "For the discerning buyer, the test of a shirting fabric lies in its handle. Roll a corner gently in the hand: premium cotton should feel smooth and cool, with a confident weight that springs back without wrinkling excessively. Trust that hand — it tells you everything about how the finished shirt will wear.",],
   },
-];
+{
+  id: 6,
+  slug: "fabric-manufacturer-india-guide",
+  tag: "Textile Excellence",
+  date: "April 2026",
+  title: "Leading Fabric Manufacturer in India: A Complete Guide",
+  description:
+    "Looking for a reliable fabric manufacturer in India? Discover how to choose the right textile partner for quality, consistency, and long-term business growth.",
+  image: "/images/blog/blog6.jpg",
+  content: [
+    "India is one of the largest textile manufacturing hubs in the world, offering a wide range of fabrics including cotton, linen, and blended materials.",
+    "Choosing the right fabric manufacturer in India is crucial for businesses that depend on quality, consistency, and timely delivery.",
+    "A reliable manufacturer should have strong expertise in weaving, dyeing, and finishing processes, along with modern infrastructure.",
+    "Regions like Tamil Nadu, especially Erode, are known for their excellence in textile production and innovation.",
+    "At Centuary Fab, we combine traditional craftsmanship with advanced technology to deliver premium cotton and linen fabrics.",
+    "Our commitment to quality and customer satisfaction makes us a trusted fabric partner for brands and wholesalers across India.",
+  ],
+},
+{
+  id: 7,
+  slug: "Centuary Fab Erode is becoming a preferred choice for premium cotton and linen fabric manufacturing in India.",
+  tag: "Brand Story",
+  date: "April 2026",
+  title: "Centuary Fab: Premium Fabric Manufacturer in Erode",
+  description:
+    "Centuary Fab is a leading fabric manufacturer in Erode, specializing in premium cotton and linen fabrics. Discover our journey, quality, and expertise in textile manufacturing.",
+  image: "/images/blog/blog7.jpg",
+  content: [
+    "Centuary Fab is a trusted name in the textile industry, known for premium fabric manufacturing in Erode, Tamil Nadu.",
+    "With a strong focus on quality and craftsmanship, Centuary Fab specializes in cotton and linen fabrics for modern apparel and textile businesses.",
+    "Located in Erode, one of India’s leading textile hubs, Centuary Fab combines traditional weaving techniques with modern manufacturing processes.",
+    "Our fabrics are designed to meet the highest standards of durability, comfort, and style.",
+    "Centuary Fab serves clients across India, offering reliable fabric supply for wholesalers, retailers, and fashion brands.",
+    "If you are searching for a fabric manufacturer in Erode, Centuary Fab stands as a symbol of quality, trust, and textile excellence.",
+  ],
+}
