@@ -1,10 +1,23 @@
 import CraftsmanshipJourney from "../components/CraftsmanshipJourney";
 import ProductCategories from "../components/ProductCategories";
 import { Link } from "wouter";
+import { Helmet } from "react-helmet-async"; // ✅ ADD THIS IMPORT
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
+
+      {/* ✅ SEO */}
+      <Helmet>
+        <title>
+          Centuary Fab | Premium Cotton & Linen Fabric Manufacturer in Erode
+        </title>
+
+        <meta
+          name="description"
+          content="Centuary Fab is a premium fabric manufacturer in Erode specializing in cotton and linen fabrics. Trusted textile partner for quality and innovation."
+        />
+      </Helmet>
 
       {/* HERO */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">

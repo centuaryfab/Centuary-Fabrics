@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link, useParams } from "wouter";
 import { posts } from "@/data/blogData";
 
@@ -19,6 +20,21 @@ export default function BlogDetail() {
   return (
     <div className="bd-root">
       <div className="bd-inner">
+      
+      <Helmet>
+  <title>
+    {post ? `${post.title} | Centuary Fab` : "Centuary Fab Blog"}
+  </title>
+
+  <meta
+    name="description"
+    content={
+      post
+        ? post.description
+        : "Explore textile insights, cotton, linen, and fabric knowledge from Centuary Fab."
+    }
+  />
+</Helmet>
 
         {/* ✅ Back Button FIXED */}
         <Link href="/blog" className="bd-back">
