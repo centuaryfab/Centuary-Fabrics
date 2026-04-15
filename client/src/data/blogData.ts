@@ -123,3 +123,4 @@ export const posts: BlogPost[] = [
     "If you are searching for a fabric manufacturer in Erode, Centuary Fab stands as a symbol of quality, trust, and textile excellence.",
   ],
 }
+];
