@@ -74,32 +74,26 @@ export default function BlogDetail() {
               <span className="bd-hero-num">0{post.id}</span>
             </div>
 
-            {/* Meta */}
-            <p className="text-sm text-gray-400 mb-4">
-  {post.date} • {post.tag}
-</p>
+           {/* Title + Meta */}
+              <h1 className="text-3xl md:text-4xl font-semibold mb-4">
+                {post.title}
+              </h1>
 
-           <div className="mb-8">
-            <img
-            src={post.image}
-            alt={post.title}
-            className="w-full h-[400px] object-cover rounded-lg"
-               />
-            </div>
+          <p className="text-sm text-gray-400 mb-6">
+           {post.date} • {post.tag}
+            </p>
 
-             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-heading font-light mb-6">{post.title}</h1>
-            <div className="bd-rule" />
-            <p className="bd-description">{post.description}</p>
+        {/* Description */}
+      <p className="text-gray-600 mb-6 leading-relaxed">
+        {post.description}
+        </p>
 
-            {/* Content */}
-            <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
-              {post.content.map((para, i) => (
-                <p key={i} className="bd-paragraph">
-                  {para}
-                </p>
-              ))}
-            </div>
+        {/* Content */}
+        <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+        {post.content.map((para, i) => (
+        <p key={i}>{para}</p>
+        ))}
+      </div>
 
             {/* Footer */}
             <div className="bd-footer">
