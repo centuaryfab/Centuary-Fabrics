@@ -75,19 +75,25 @@ export default function BlogDetail() {
             </div>
 
             {/* Meta */}
-            <div className="bd-meta">
-              <span className="bd-date">{post.date}</span>
-              <div className="bd-meta-dot" />
-              <span className="bd-tag-label">{post.tag}</span>
+            <p className="text-sm text-gray-400 mb-4">
+  {post.date} • {post.tag}
+</p>
+
+           <div className="mb-8">
+            <img
+            src={post.image}
+            alt={post.title}
+            className="w-full h-[400px] object-cover rounded-lg"
+               />
             </div>
 
-            {/* Title */}
-            <h1 className="bd-title">{post.title}</h1>
+             {/* Title */}
+            <h1 className="text-3xl md:text-4xl font-heading font-light mb-6">{post.title}</h1>
             <div className="bd-rule" />
             <p className="bd-description">{post.description}</p>
 
             {/* Content */}
-            <div className="bd-body">
+            <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
               {post.content.map((para, i) => (
                 <p key={i} className="bd-paragraph">
                   {para}
